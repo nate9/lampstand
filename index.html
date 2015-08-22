@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lampstand</title>
+
+		<meta name="description" content="Lampstand">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<!--
+		-->
+		<!-- Optional theme -->
+		<!--
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		-->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<script></script>
+
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<!--
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		-->
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-8">
+				<br/>
+				<br/>
+				<div class="input-group input-group-lg">
+					<input type="text" id="passage" class="form-control" placeholder="Enter Bible Verse Here">
+					<span class="input-group-btn">
+						<button id="search" class="btn btn-default" type="button">
+							Search
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-lg-2">
+			</div>
+		</div>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Welcome to Lampstand!</h1>
+					<p>Hacked up by nate9 :p</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+		<script>
+			function SearchBar() {
+				this.$passage = $("#passage");
+				this.$searchBtn = $("#search");
+				this.$slides = $(".slides");
+				this.$searchBtn.on("click", this.search.bind(this))
+				this.passage = "";
+			}
+
+			SearchBar.prototype.search = function() {
+				console.log("Getting Data");
+				var encodedPassage = encodeURI(this.$passage.val());
+				$.ajax({
+					url: "http://labs.bible.org/api/?passage=" + encodedPassage + "&type=json",
+					dataType: "jsonp",
+					success: this._render.bind(this)
+				});
+			}
+
+			SearchBar.prototype._render = function(data) {
+				var newSlide = document.createElement("section");
+				this.$slides.append(newSlide);
+
+				for(var i = 0; i < data.length; i++) {
+					var text = data[i].text;
+					var verseNo = data[i].verse;
+					$("<section><blockquote><sup>" + verseNo +"</sup> " + text + "</blockquote></section>").appendTo(newSlide);
+				}
+			}
+
+			var searchBar = new SearchBar();
+		</script>
+	</body>
+</html>
