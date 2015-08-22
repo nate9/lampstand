@@ -138,6 +138,7 @@
 					var verseNo = data[i].verse;
 					$("<section><blockquote><sup>" + verseNo +"</sup> " + text + "</blockquote></section>").appendTo(newSlide);
 				}
+				Reveal.sync();
 			}
 
 			var searchBar = new SearchBar();
