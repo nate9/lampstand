@@ -169,10 +169,16 @@
 
 			SearchBar.prototype._parseXml = function(data) {
 				var xmlDoc = $.parseXML(data.results[0]);
-				var verses = $(xmlDoc).find("verse-unit").find("woc")
+				var verses = $(xmlDoc).find("verse-unit")
 					.map(function() {
-						var verseElem = $(this).clone();
-						var verseText = verseElem.children()
+						var verseElem;
+						if($(this).find("woc").length) {
+							var verseElem =	$(this).find("woc").clone();
+						} else {
+							var verseElem = $(this).clone();
+						}
+
+						var verseText = verseElem.children(":not(.divine-name)")
 											.remove()
 											.end()
 											.text();
