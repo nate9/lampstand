@@ -148,21 +148,51 @@
 
 			SearchBar.prototype.search = function() {
 				console.log("Getting Data");
+				//TODO: Use own server to call ESV API rather than using YQL
 				var encodedPassage = encodeURI(this.$passage.val());
+				var xmlSource = "http://www.esvapi.org/v2/rest/passageQuery?key=IP&passage=" + encodedPassage 
+								+ "&output-format=crossway-xml-1.0"
+								+ "&include-xml-declaration=true" 
+								+ "&include-simple-entities=true"
+								+ "&include-footnotes=false";
+				var yqlURL = [
+					"http://query.yahooapis.com/v1/public/yql",
+					"?q=" + encodeURIComponent("select * from xml where url='" + xmlSource + "'"),
+					"&format=xml&callback=?"
+				].join("");
 				$.ajax({
-					url: "http://labs.bible.org/api/?passage=" + encodedPassage + "&type=json",
-					dataType: "jsonp",
-					success: this._render.bind(this)
-				});
+					url: yqlURL,
+					dataType: "json",
+					success: this._parseXml.bind(this)
+				})
 			}
 
-			SearchBar.prototype._render = function(data) {
+			SearchBar.prototype._parseXml = function(data) {
+				var xmlDoc = $.parseXML(data.results[0]);
+				var verses = $(xmlDoc).find("verse-unit").find("woc")
+					.map(function() {
+						var verseElem = $(this).clone();
+						var verseText = verseElem.children()
+											.remove()
+											.end()
+											.text();
+
+						return verseText.replace("\"","");
+						}).get();
+				var verseNos = $(xmlDoc).find("verse-num")
+						.map(function() {
+						return $(this).text();
+						}).get();
+				this._render(verses, verseNos);
+			}
+
+			SearchBar.prototype._render = function(verses, verseNos) {
 				var newSlide = document.createElement("section");
 				this.$slides.append(newSlide);
 
-				for(var i = 0; i < data.length; i++) {
-					var text = data[i].text;
-					var verseNo = data[i].verse;
+				for(var i = 0; i < verses.length; i++) {
+					var text = verses[i];
+					var verseNo = verseNos[i];
 					$("<section><blockquote><sup>" + verseNo +"</sup> " + text + "</blockquote></section>").appendTo(newSlide);
 				}
 				Reveal.sync();
