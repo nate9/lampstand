@@ -1,12 +1,12 @@
 package lampstand
 
 import (
-	"strings"
-	"strconv"
 	"fmt"
 	"github.com/julienschmidt/httprouter"
-	"net/http"
 	"log"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
 type PassageService struct {
@@ -14,17 +14,17 @@ type PassageService struct {
 }
 
 type PassageQuery struct {
-	book string
+	book    string
 	chapter int
-	begin int
-	end int
+	begin   int
+	end     int
 }
 
-func NewPassageService(db string) (*PassageService) {
+func NewPassageService(db string) *PassageService {
 	service := new(PassageService)
 	dao, err := NewPassageDao(db)
 	service.dao = dao
-	if(err != nil) {
+	if err != nil {
 		fmt.Println("couldn't open passage service: ", err)
 	}
 	return service
@@ -37,9 +37,9 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ ht
 	pq := parsePassage(passagequery)
 	var passage Passage
 	var err error
-	if(pq.end != -1) {
+	if pq.end != -1 {
 		passage, err = s.dao.FindVerses(pq.book, pq.chapter, pq.begin, pq.end)
-	} else if (pq.begin != -1) {
+	} else if pq.begin != -1 {
 		passage, err = s.dao.FindVerse(pq.book, pq.chapter, pq.begin)
 	} else {
 		passage, err = s.dao.FindChapter(pq.book, pq.chapter)
@@ -50,25 +50,25 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ ht
 }
 
 func parsePassage(passagequery string) (pq PassageQuery) {
-	pq = PassageQuery{book:"", chapter:-1, begin: -1, end: -1}
+	pq = PassageQuery{book: "", chapter: -1, begin: -1, end: -1}
 	passagequery = strings.TrimSpace(passagequery)
 	end := len(passagequery)
-	lastspace := strings.LastIndex(passagequery," ")
+	lastspace := strings.LastIndex(passagequery, " ")
 	pq.book = passagequery[:lastspace]
 	colon := strings.Index(passagequery, ":")
-	
-	if(colon != -1) {
-		pq.chapter, _ = strconv.Atoi(passagequery[lastspace+1:colon])
+
+	if colon != -1 {
+		pq.chapter, _ = strconv.Atoi(passagequery[lastspace+1 : colon])
 	} else {
-		pq.chapter, _ = strconv.Atoi(passagequery[lastspace+1:end])
+		pq.chapter, _ = strconv.Atoi(passagequery[lastspace+1 : end])
 	}
 
 	hyphen := strings.Index(passagequery, "-")
-	if(hyphen != -1 && colon != -1) {
-		pq.begin, _ = strconv.Atoi(passagequery[colon+1:hyphen])
-		pq.end, _ = strconv.Atoi(passagequery[hyphen+1:end])
-	} else if(hyphen == -1 && colon != -1) {
-		pq.begin, _ = strconv.Atoi(passagequery[colon+1:end])
+	if hyphen != -1 && colon != -1 {
+		pq.begin, _ = strconv.Atoi(passagequery[colon+1 : hyphen])
+		pq.end, _ = strconv.Atoi(passagequery[hyphen+1 : end])
+	} else if hyphen == -1 && colon != -1 {
+		pq.begin, _ = strconv.Atoi(passagequery[colon+1 : end])
 	}
 
 	return pq
@@ -81,8 +81,8 @@ func main() {
 	http.ListenAndServe(":8080", router)
 }
 
-func checkErr(err error){
-	if(err != nil) {
+func checkErr(err error) {
+	if err != nil {
 		fmt.Println(err)
 		log.Fatal(err)
 	}

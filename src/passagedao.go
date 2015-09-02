@@ -1,15 +1,15 @@
 package lampstand
 
 import (
-	"fmt"
 	"database/sql"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 )
 
 type PassageDaoImpl struct {
-  db *sql.DB
+	db *sql.DB
 }
 
 type PassageDao interface {
@@ -26,7 +26,7 @@ func NewPassageDao(database string) (PassageDao, error) {
 	return p, err
 }
 
-func TestPassageDao(db *sql.DB) (PassageDao) {
+func TestPassageDao(db *sql.DB) PassageDao {
 	p := &PassageDaoImpl{db: db}
 	return p
 }
@@ -35,7 +35,7 @@ func (p *PassageDaoImpl) Setup(setupDir string) {
 	fmt.Println("Setting up database")
 	fileList := []string{}
 	filepath.Walk(setupDir, func(path string, f os.FileInfo, _ error) error {
-		if(!f.IsDir()) {
+		if !f.IsDir() {
 			fileList = append(fileList, path)
 		}
 		return nil

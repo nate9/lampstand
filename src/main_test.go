@@ -21,7 +21,4 @@ func TestParseVerse(t *testing.T) {
 			t.Errorf("parsePassage(%q) == %+v\n, want %+v\n", c.in, pq, c.pq)
 		}
 	}
-
-	
-
 }
