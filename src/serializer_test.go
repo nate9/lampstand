@@ -1,25 +1,25 @@
 package lampstand
 
 import (
-	"testing"
-	"gopkg.in/DATA-DOG/go-sqlmock.v1"
 	"fmt"
+	"gopkg.in/DATA-DOG/go-sqlmock.v1"
+	"testing"
 )
 
 func TestToJson(t *testing.T) {
 	p := Passage{
 		[]Verse{
 			Verse{
-				Book: "Genesis",
+				Book:    "Genesis",
 				Chapter: 1,
 				VerseNo: 1,
-				Text: "In the beginning",
+				Text:    "In the beginning",
 			},
 		},
 	}
 	e := "{\"Verses\":[{\"Book\":\"Genesis\",\"Chapter\":1,\"VerseNo\":1,\"Text\":\"In the beginning\"}]}"
 	cases := []struct {
-		in Passage
+		in   Passage
 		want string
 	}{
 		{p, e},
@@ -41,15 +41,15 @@ func TestToPassage(t *testing.T) {
 	defer db.Close()
 
 	rows := sqlmock.NewRows([]string{"BOOK", "CHAPTER", "VERSE", "TEXT"}).
-				AddRow("Genesis", 1, 1, "In the beginning")
+		AddRow("Genesis", 1, 1, "In the beginning")
 
 	mock.ExpectQuery("^SELECT (.+) FROM BIBLE").WillReturnRows(rows)
 
 	rs, err := db.Query("SELECT * FROM BIBLE")
-	if(err != nil) {
+	if err != nil {
 		fmt.Println("failed to query mock database:", err)
 	}
-	
+
 	defer rs.Close()
 
 	result := ToPassage(rs)
@@ -57,10 +57,10 @@ func TestToPassage(t *testing.T) {
 	want := Passage{
 		[]Verse{
 			Verse{
-				Book: "Genesis",
+				Book:    "Genesis",
 				Chapter: 1,
 				VerseNo: 1,
-				Text: "In the beginning",
+				Text:    "In the beginning",
 			},
 		},
 	}
@@ -68,9 +68,8 @@ func TestToPassage(t *testing.T) {
 	gotVerse := result.Verses[0]
 	wantVerse := want.Verses[0]
 
-	if(gotVerse != wantVerse) {
+	if gotVerse != wantVerse {
 		t.Errorf("ToPassage = %q, want %q", gotVerse, wantVerse)
 	}
-
 
 }

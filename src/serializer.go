@@ -1,23 +1,23 @@
 package lampstand
 
 import (
-	"fmt"
 	"database/sql"
 	"encoding/json"
+	"fmt"
 )
 
 type Verse struct {
-	Book string
+	Book    string
 	Chapter float64
 	VerseNo float64
-	Text string
+	Text    string
 }
 
 type Passage struct {
 	Verses []Verse
 }
 
-func ToPassage(rs *sql.Rows) (Passage) {
+func ToPassage(rs *sql.Rows) Passage {
 	p := Passage{Verses: []Verse{}}
 	for rs.Next() {
 		v := new(Verse)
