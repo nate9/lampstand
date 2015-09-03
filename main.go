@@ -1,4 +1,4 @@
-package main
+package main // import "github.com/nate9/lampstand"
 
 import (
 	"fmt"
