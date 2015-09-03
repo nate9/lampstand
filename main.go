@@ -78,7 +78,8 @@ func main() {
 	service := NewPassageService("./hcsb.db")
 	router := httprouter.New()
 	router.GET("/api/verses", service.findVerses)
-	http.ListenAndServe(":8080", router)
+	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func checkErr(err error) {
