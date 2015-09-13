@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"os"
 )
 
 type PassageService struct {
@@ -79,7 +80,14 @@ func main() {
 	router := httprouter.New()
 	router.GET("/api/verses", service.findVerses)
 	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
-	log.Fatal(http.ListenAndServe(":8080", router))
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Print("PORT not defined, defaulting to 8080")
+		port = "8080"
+	}
+
+	log.Fatal(http.ListenAndServe(":" + port, router))
 }
 
 func checkErr(err error) {
