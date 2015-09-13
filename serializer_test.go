@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/DATA-DOG/go-sqlmock.v1"
+	"github.com/nate9/lampstand/Godeps/_workspace/src/gopkg.in/DATA-DOG/go-sqlmock.v1"
 	"testing"
 )
 

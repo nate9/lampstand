@@ -2,7 +2,7 @@ package main // import "github.com/nate9/lampstand"
 
 import (
 	"fmt"
-	"github.com/julienschmidt/httprouter"
+	"github.com/nate9/lampstand/Godeps/_workspace/src/github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
 	"strconv"
