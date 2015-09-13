@@ -59,22 +59,22 @@ func insertBookIntoDb(path string, db *sql.DB) {
 }
 
 func (p *PassageDaoImpl) FindChapter(book string, chapterNo int) (result Passage, err error) {
-	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK = ? AND CHAPTER = ?", book, chapterNo)
+	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK LIKE ? + AND CHAPTER = ?", book + "%", chapterNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
 }
 
 func (p *PassageDaoImpl) FindVerse(book string, chapterNo int, verseNo int) (result Passage, err error) {
-	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK = ? AND CHAPTER = ? AND VERSE = ?", book, chapterNo, verseNo)
+	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK LIKE ? AND CHAPTER = ? AND VERSE = ?", book + "%", chapterNo, verseNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
 }
 
 func (p *PassageDaoImpl) FindVerses(book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
-	query := "SELECT * FROM BIBLE WHERE BOOK = ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
-	rows, err := p.db.Query(query, book, chapterNo, verseBegin, verseEnd)
+	query := "SELECT * FROM BIBLE WHERE BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
+	rows, err := p.db.Query(query, book + "%", chapterNo, verseBegin, verseEnd)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
