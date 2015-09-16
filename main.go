@@ -34,6 +34,11 @@ func NewPassageService(db string) *PassageService {
 func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	params := r.URL.Query()
 	passagequery := params.Get("passage")
+	if passagequery == "" {
+		http.Error(w, "passage query parameter not defined", 400)
+		return
+	}
+
 	fmt.Println(passagequery)
 	pq := parsePassage(passagequery)
 	var passage Passage
@@ -45,7 +50,17 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ ht
 	} else {
 		passage, err = s.dao.FindChapter(pq.book, pq.chapter)
 	}
-	checkErr(err)
+	if err != nil {
+		http.Error(w, err.Error(), 500)
+		return
+	}
+
+	if len(passage.Verses) == 0 {
+		log.Println("passage not found")
+		http.Error(w, "No such passage exists", 404)
+		return
+	}
+
 	passageJson := ToJson(passage)
 	fmt.Fprint(w, string(passageJson))
 }
@@ -79,6 +94,10 @@ func main() {
 	service := NewPassageService("./hcsb.db")
 	router := httprouter.New()
 	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
+	if bind == ":" {
+		bind = "localhost:8080"
+	}
+	fmt.Println("Serving lampstand on : " + bind)
 	router.GET("/api/verses", service.findVerses)
 	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
 	log.Fatal(http.ListenAndServe(bind, router))
@@ -87,6 +106,6 @@ func main() {
 func checkErr(err error) {
 	if err != nil {
 		fmt.Println(err)
-		log.Fatal(err)
+		log.Println(err)
 	}
 }
