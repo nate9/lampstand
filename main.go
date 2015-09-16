@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"os"
 )
 
 type PassageService struct {
@@ -77,9 +78,10 @@ func parsePassage(passagequery string) (pq PassageQuery) {
 func main() {
 	service := NewPassageService("./hcsb.db")
 	router := httprouter.New()
+	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
 	router.GET("/api/verses", service.findVerses)
 	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(bind, router))
 }
 
 func checkErr(err error) {
