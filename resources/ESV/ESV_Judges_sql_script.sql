@@ -1235,4 +1235,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Judges', 21, 24, 'And the people of Israel departed from there at that time, every man to his tribe and family, and they went out from there every man to his inheritance.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Judges', 21, 25, 'In those days there was no king in Israel. Everyone did what was right in his own eyes.');
-COMMIT
+COMMIT;

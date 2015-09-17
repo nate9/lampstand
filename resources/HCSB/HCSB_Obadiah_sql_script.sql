@@ -41,4 +41,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Obadiah', 1, 20, 'The exiles of the Israelites who are in Halah who are among the Canaanites as far as Zarephath and the exiles of Jerusalem who are in Sepharad will possess the cities of the Negev.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Obadiah', 1, 21, 'Saviors will ascend Mount Zion to rule over the hill country of Esau, but the kingdom will be the LORD''s.');
-COMMIT
+COMMIT;

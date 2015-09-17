@@ -1235,4 +1235,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Judges', 21, 24, 'At that time the Israelites left that place and went home to their tribes and clans, each to his own inheritance.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Judges', 21, 25, 'In those days Israel had no king; everyone did as he saw fit.');
-COMMIT
+COMMIT;

@@ -393,4 +393,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Hosea', 14, 8, 'Ephraim, why should I have anything more to do with idols? It is I who answer and watch over him. I am like a flourishing pine tree; your fruit comes from Me.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Hosea', 14, 9, 'Let whoever is wise understand these things, and whoever is insightful recognize them. For the ways of the LORD are right, and the righteous walk in them, but the rebellious stumble in them.');
-COMMIT
+COMMIT;

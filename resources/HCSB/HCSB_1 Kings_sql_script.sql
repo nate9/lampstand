@@ -1631,4 +1631,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Kings', 22, 52, 'He did what was evil in the LORD''s sight. He walked in the way of his father, in the way of his mother, and in the way of Jeroboam son of Nebat, who had caused Israel to sin.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Kings', 22, 53, 'He served Baal and worshiped him. He provoked the LORD God of Israel just as his father had done.');
-COMMIT
+COMMIT;

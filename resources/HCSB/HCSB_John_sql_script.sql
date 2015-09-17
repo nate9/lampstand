@@ -1757,4 +1757,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'John', 21, 24, 'This is the disciple who testifies to these things and who wrote them down. We know that his testimony is true.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'John', 21, 25, 'And there are also many other things that Jesus did, which, if they were written one by one, I suppose not even the world itself could contain the books that would be written.');
-COMMIT
+COMMIT;

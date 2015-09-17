@@ -811,4 +811,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Nehemiah', 13, 30, 'So I purified the priests and the Levites of everything foreign, and assigned them duties, each to his own task.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Nehemiah', 13, 31, 'I also made provision for contributions of wood at designated times, and for the firstfruits. Remember me with favour, O my God.');
-COMMIT
+COMMIT;

@@ -2425,4 +2425,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Exodus', 40, 37, 'But if the cloud was not taken up, then they did not set out till the day that it was taken up.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Exodus', 40, 38, 'For the cloud of the LORD was on the tabernacle by day, and fire was in it by night, in the sight of all the house of Israel throughout all their journeys.');
-COMMIT
+COMMIT;

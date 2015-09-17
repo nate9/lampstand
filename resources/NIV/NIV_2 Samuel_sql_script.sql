@@ -1389,4 +1389,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Samuel', 24, 24, 'But the king replied to Araunah, "No, I insist on paying you for it. I will not sacrifice to the LORD my God burnt offerings that cost me nothing." So David bought the threshing-floor and the oxen and paid fifty shekels of silver for them.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Samuel', 24, 25, 'David built an altar to the LORD there and sacrificed burnt offerings and fellowship offerings. Then the LORD answered prayer on behalf of the land, and the plague on Israel was stopped.');
-COMMIT
+COMMIT;

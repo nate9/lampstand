@@ -2139,4 +2139,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Job', 42, 16, 'Job lived 140 years after this and saw his children and their children to the fourth generation.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Job', 42, 17, 'Then Job died, old and full of days.');
-COMMIT
+COMMIT;

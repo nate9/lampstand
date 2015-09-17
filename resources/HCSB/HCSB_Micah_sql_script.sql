@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Micah', 7, 19, 'He will again have compassion on us; He will vanquish our iniquities. You will cast all our sins into the depths of the sea.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Micah', 7, 20, 'You will show loyalty to Jacob and faithful love to Abraham, as You swore to our fathers from days long ago.');
-COMMIT
+COMMIT;

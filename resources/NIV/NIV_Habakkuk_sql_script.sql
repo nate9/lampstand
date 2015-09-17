@@ -111,4 +111,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Habakkuk', 3, 18, 'yet I will rejoice in the LORD, I will be joyful in God my Saviour.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Habakkuk', 3, 19, 'The Sovereign LORD is my strength; he makes my feet like the feet of a deer, he enables me to go on the heights. For the director of music. On my stringed instruments.');
-COMMIT
+COMMIT;

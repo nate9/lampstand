@@ -111,4 +111,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Habakkuk', 3, 18, 'yet I will triumph in the LORD; I will rejoice in the God of my salvation!');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Habakkuk', 3, 19, 'Yahweh my Lord is my strength; He makes my feet like those of a deer and enables me to walk on mountain heights! [For the choir director: on stringed instruments.]');
-COMMIT
+COMMIT;

@@ -811,4 +811,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Nehemiah', 13, 30, 'So I purified them from everything foreign and assigned specific duties to each of the priests and Levites.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Nehemiah', 13, 31, 'I also arranged for the donation of wood at the appointed times and for the firstfruits. Remember me, my God, with favor.');
-COMMIT
+COMMIT;

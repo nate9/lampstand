@@ -2013,4 +2013,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Acts', 28, 30, 'For two whole years Paul stayed there in his own rented house and welcomed all who came to see him.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Acts', 28, 31, 'Boldly and without hindrance he preached the kingdom of God and taught about the Lord Jesus Christ.');
-COMMIT
+COMMIT;

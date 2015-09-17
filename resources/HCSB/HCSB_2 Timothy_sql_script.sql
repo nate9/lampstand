@@ -165,4 +165,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Timothy', 4, 21, 'Make every effort to come before winter. Eubulus greets you, as do Pudens, Linus, Claudia, and all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Timothy', 4, 22, 'The Lord be with your spirit. Grace be with you!');
-COMMIT
+COMMIT;

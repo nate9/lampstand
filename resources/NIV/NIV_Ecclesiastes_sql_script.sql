@@ -443,4 +443,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Ecclesiastes', 12, 13, 'Now all has been heard; here is the conclusion of the matter: Fear God and keep his commandments, for this is the whole [duty] of man.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Ecclesiastes', 12, 14, 'For God will bring every deed into judgment, including every hidden thing, whether it is good or evil.');
-COMMIT
+COMMIT;

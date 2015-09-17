@@ -225,4 +225,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '1 Timothy', 6, 20, 'O Timothy, guard the deposit entrusted to you. Avoid the irreverent babble and contradictions of what is falsely called "knowledge,"');
 INSERT INTO BIBLE VALUES 
 ('ESV', '1 Timothy', 6, 21, 'for by professing it some have swerved from the faith. Grace be with you.');
-COMMIT
+COMMIT;

@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '2 Thessalonians', 3, 17, 'I, Paul, write this greeting with my own hand. This is the sign of genuineness in every letter of mine; it is the way I write.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '2 Thessalonians', 3, 18, 'The grace of our Lord Jesus Christ be with you all.');
-COMMIT
+COMMIT;

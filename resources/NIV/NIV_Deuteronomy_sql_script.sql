@@ -1917,4 +1917,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Deuteronomy', 34, 11, 'who did all those miraculous signs and wonders the LORD sent him to do in Egypt--to Pharaoh and to all his officials and to his whole land.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Deuteronomy', 34, 12, 'For no-one has ever shown the mighty power or performed the awesome deeds that Moses did in the sight of all Israel.');
-COMMIT
+COMMIT;

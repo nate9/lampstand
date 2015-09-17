@@ -169,4 +169,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Ruth', 4, 21, 'Salmon fathered Boaz, who fathered Obed.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Ruth', 4, 22, 'And Obed fathered Jesse, who fathered David.');
-COMMIT
+COMMIT;

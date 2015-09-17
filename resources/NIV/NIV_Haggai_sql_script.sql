@@ -75,4 +75,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Haggai', 2, 22, 'I will overturn royal thrones and shatter the power of the foreign kingdoms. I will overthrow chariots and their drivers; horses and their riders will fall, each by the sword of his brother.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Haggai', 2, 23, '"`On that day,'' declares the LORD Almighty,`I will take you, my servant Zerubbabel son of Shealtiel,'' declares the LORD,`and I will make you like my signet ring, for I have chosen you,'' declares the LORD Almighty."');
-COMMIT
+COMMIT;

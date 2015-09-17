@@ -169,4 +169,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Ruth', 4, 21, 'Salmon the father of Boaz, Boaz the father of Obed,');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Ruth', 4, 22, 'Obed the father of Jesse, and Jesse the father of David.');
-COMMIT
+COMMIT;

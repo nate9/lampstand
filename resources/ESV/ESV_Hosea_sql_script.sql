@@ -393,4 +393,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Hosea', 14, 8, 'O Ephraim, what have I to do with idols? It is I who answer and look after you. I am like an evergreen cypress; from me comes your fruit.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Hosea', 14, 9, 'Whoever is wise, let him understand these things; whoever is discerning, let him know them; for the ways of the LORD are right, and the upright walk in them, but transgressors stumble in them.');
-COMMIT
+COMMIT;

@@ -807,4 +807,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Revelation', 22, 20, 'He who testifies to these things says, "Surely I am coming soon." Amen. Come, Lord Jesus!');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Revelation', 22, 21, 'The grace of the Lord Jesus be with all. Amen.');
-COMMIT
+COMMIT;

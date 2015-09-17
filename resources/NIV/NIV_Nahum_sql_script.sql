@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Nahum', 3, 18, 'O king of Assyria, your shepherds slumber; your nobles lie down to rest. Your people are scattered on the mountains with no-one to gather them.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Nahum', 3, 19, 'Nothing can heal your wound; your injury is fatal. Everyone who hears the news about you claps his hands at your fall, for who has not felt your endless cruelty?');
-COMMIT
+COMMIT;

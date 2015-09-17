@@ -233,4 +233,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Song of Solomon', 8, 13, 'O you who dwell in the gardens, with companions listening for your voice; let me hear it.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Song of Solomon', 8, 14, 'Make haste, my beloved, and be like a gazelle or a young stag on the mountains of spices.');
-COMMIT
+COMMIT;

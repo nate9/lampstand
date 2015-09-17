@@ -145,4 +145,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Joel', 3, 20, 'But Judah will be inhabited forever, and Jerusalem from generation to generation.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Joel', 3, 21, 'I will pardon their bloodguilt, [which] I have not pardoned, for the LORD dwells in Zion.');
-COMMIT
+COMMIT;

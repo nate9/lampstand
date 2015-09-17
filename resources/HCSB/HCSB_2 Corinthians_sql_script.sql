@@ -511,4 +511,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Corinthians', 13, 12, 'Greet one another with a holy kiss. All the saints greet you.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Corinthians', 13, 13, 'The grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with all of you.');
-COMMIT
+COMMIT;

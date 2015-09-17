@@ -121,4 +121,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Peter', 3, 17, 'Therefore, dear friends, since you have been forewarned, be on your guard, so that you are not led away by the error of the immoral and fall from your own stability.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Peter', 3, 18, 'But grow in the grace and knowledge of our Lord and Savior Jesus Christ. To Him be the glory both now and to the day of eternity. Amen.');
-COMMIT
+COMMIT;

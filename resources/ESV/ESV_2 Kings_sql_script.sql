@@ -1437,4 +1437,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '2 Kings', 25, 29, 'So Jehoiachin put off his prison garments. And every day of his life he dined regularly at the king''s table,');
 INSERT INTO BIBLE VALUES 
 ('ESV', '2 Kings', 25, 30, 'and for his allowance, a regular allowance was given him by the king, according to his daily needs, as long as he lived.');
-COMMIT
+COMMIT;

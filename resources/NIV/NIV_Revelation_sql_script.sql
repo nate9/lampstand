@@ -807,4 +807,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Revelation', 22, 20, 'He who testifies to these things says, "Yes, I am coming soon." Amen. Come, Lord Jesus.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Revelation', 22, 21, 'The grace of the Lord Jesus be with God''s people. Amen.');
-COMMIT
+COMMIT;

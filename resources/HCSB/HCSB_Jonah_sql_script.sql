@@ -95,4 +95,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Jonah', 4, 10, 'So the LORD said, "You cared about the plant, which you did not labor over and did not grow. It appeared in a night and perished in a night.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Jonah', 4, 11, 'Should I not care about the great city of Nineveh, which has more than 120,000 people who cannot distinguish between their right and their left, as well as many animals?"');
-COMMIT
+COMMIT;

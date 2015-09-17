@@ -2575,4 +2575,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Numbers', 36, 12, 'They married within the clans of the descendants of Manasseh son of Joseph, and their inheritance remained in their father''s clan and tribe.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Numbers', 36, 13, 'These are the commands and regulations the LORD gave through Moses to the Israelites on the plains of Moab by the Jordan across from Jericho.');
-COMMIT
+COMMIT;

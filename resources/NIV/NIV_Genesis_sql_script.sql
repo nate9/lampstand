@@ -3065,4 +3065,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Genesis', 50, 25, 'And Joseph made the sons of Israel swear an oath and said, "God will surely come to your aid, and then you must carry my bones up from this place."');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Genesis', 50, 26, 'So Joseph died at the age of a hundred and ten. And after they embalmed him, he was placed in a coffin in Egypt.');
-COMMIT
+COMMIT;

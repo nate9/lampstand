@@ -41,4 +41,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Obadiah', 1, 20, 'The exiles of this host of the people of Israel shall possess the land of the Canaanites as far as Zarephath, and the exiles of Jerusalem who are in Sepharad shall possess the cities of the Negeb.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Obadiah', 1, 21, 'Saviors shall go up to Mount Zion to rule Mount Esau, and the kingdom shall be the LORD''s.');
-COMMIT
+COMMIT;

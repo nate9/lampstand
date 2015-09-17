@@ -713,4 +713,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Daniel', 12, 12, 'Blessed is he who waits and arrives at the 1,335 days.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Daniel', 12, 13, 'But go your way till the end. And you shall rest and shall stand in your allotted place at the end of the days."');
-COMMIT
+COMMIT;

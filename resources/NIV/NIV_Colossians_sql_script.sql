@@ -189,4 +189,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Colossians', 4, 17, 'Tell Archippus: "See to it that you complete the work you have received in the Lord."');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Colossians', 4, 18, 'I, Paul, write this greeting in my own hand. Remember my chains. Grace be with you.');
-COMMIT
+COMMIT;

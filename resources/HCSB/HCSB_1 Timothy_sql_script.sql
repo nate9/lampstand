@@ -225,4 +225,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Timothy', 6, 20, 'Timothy, guard what has been entrusted to you, avoiding irreverent, empty speech and contradictions from the "knowledge" that falsely bears that name.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Timothy', 6, 21, 'By professing it, some people have deviated from the faith. Grace be with all of you.');
-COMMIT
+COMMIT;

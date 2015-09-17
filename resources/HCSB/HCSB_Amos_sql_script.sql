@@ -291,4 +291,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Amos', 9, 14, 'I will restore the fortunes of My people Israel. They will rebuild and occupy ruined cities, plant vineyards and drink their wine, make gardens and eat their produce.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Amos', 9, 15, 'I will plant them on their land, and they will never again be uprooted from the land I have given them. Yahweh your God has spoken.');
-COMMIT
+COMMIT;

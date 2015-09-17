@@ -121,4 +121,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Peter', 3, 17, 'Therefore, dear friends, since you already know this, be on your guard so that you may not be carried away by the error of lawless men and fall from your secure position.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Peter', 3, 18, 'But grow in the grace and knowledge of our Lord and Saviour Jesus Christ. To him be glory both now and for ever! Amen.');
-COMMIT
+COMMIT;

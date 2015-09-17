@@ -233,4 +233,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Song of Solomon', 8, 13, 'You who dwell in the gardens with friends in attendance, let me hear your voice!');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Song of Solomon', 8, 14, 'Come away, my lover, and be like a gazelle or like a young stag on the spice-laden mountains.');
-COMMIT
+COMMIT;

@@ -207,4 +207,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Philippians', 4, 22, 'All the saints greet you, but especially those from Caesar''s household.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Philippians', 4, 23, 'The grace of the Lord Jesus Christ be with your spirit.');
-COMMIT
+COMMIT;

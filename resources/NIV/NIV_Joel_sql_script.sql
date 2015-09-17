@@ -145,4 +145,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Joel', 3, 20, 'Judah will be inhabited for ever and Jerusalem through all generations.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Joel', 3, 21, 'Their bloodguilt, which I have not pardoned, I will pardon." The LORD dwells in Zion!');
-COMMIT
+COMMIT;

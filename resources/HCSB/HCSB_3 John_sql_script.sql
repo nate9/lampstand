@@ -27,4 +27,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '3 John', 1, 13, 'I have many things to write you, but I don''t want to write to you with pen and ink.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '3 John', 1, 14, 'I hope to see you soon, and we will talk face to face. Peace be with you. The friends send you greetings. Greet the friends by name.');
-COMMIT
+COMMIT;

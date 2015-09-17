@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Peter', 5, 13, 'She who is in Babylon, chosen together with you, sends you her greetings, and so does my son Mark.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Peter', 5, 14, 'Greet one another with a kiss of love. Peace to all of you who are in Christ.');
-COMMIT
+COMMIT;

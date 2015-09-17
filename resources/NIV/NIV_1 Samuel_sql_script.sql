@@ -1619,4 +1619,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Samuel', 31, 12, 'all their valiant men journeyed through the night to Beth Shan. They took down the bodies of Saul and his sons from the wall of Beth Shan and went to Jabesh, where they burned them.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Samuel', 31, 13, 'Then they took their bones and buried them under a tamarisk tree at Jabesh, and they fasted seven days.');
-COMMIT
+COMMIT;

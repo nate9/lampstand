@@ -865,4 +865,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Romans', 16, 26, 'but now revealed and made known through the prophetic Scriptures, according to the command of the eternal God, to advance the obedience of faith among all nations--');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Romans', 16, 27, 'to the only wise God, through Jesus Christ-- to Him be the glory forever! Amen.');
-COMMIT
+COMMIT;

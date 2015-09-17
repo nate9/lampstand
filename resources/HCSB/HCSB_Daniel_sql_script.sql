@@ -713,4 +713,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Daniel', 12, 12, 'Blessed is the one who waits for and reaches 1,335 days.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Daniel', 12, 13, 'But as for you, go on your way to the end; you will rest, then rise to your destiny at the end of the days."');
-COMMIT
+COMMIT;

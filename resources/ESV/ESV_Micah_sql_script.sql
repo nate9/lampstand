@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Micah', 7, 19, 'He will again have compassion on us; he will tread our iniquities under foot. You will cast all our sins into the depths of the sea.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Micah', 7, 20, 'You will show faithfulness to Jacob and steadfast love to Abraham, as you have sworn to our fathers from the days of old.');
-COMMIT
+COMMIT;

@@ -2013,4 +2013,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Acts', 28, 30, 'He lived there two whole years at his own expense, and welcomed all who came to him,');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Acts', 28, 31, 'proclaiming the kingdom of God and teaching about the Lord Jesus Christ with all boldness and without hindrance.');
-COMMIT
+COMMIT;

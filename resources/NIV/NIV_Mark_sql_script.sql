@@ -1355,4 +1355,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Mark', 16, 19, 'After the Lord Jesus had spoken to them, he was taken up into heaven and he sat at the right hand of God.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Mark', 16, 20, 'Then the disciples went out and preached everywhere, and the Lord worked with them and confirmed his word by the signs that accompanied it.');
-COMMIT
+COMMIT;

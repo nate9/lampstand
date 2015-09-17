@@ -1757,4 +1757,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'John', 21, 24, 'This is the disciple who is bearing witness about these things, and who has written these things, and we know that his testimony is true.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'John', 21, 25, 'Now there are also many other things that Jesus did. Were every one of them to be written, I suppose that the world itself could not contain the books that would be written.');
-COMMIT
+COMMIT;

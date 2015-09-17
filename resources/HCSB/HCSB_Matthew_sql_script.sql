@@ -2141,4 +2141,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Matthew', 28, 19, 'Go, therefore, and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Matthew', 28, 20, 'teaching them to observe everything I have commanded you. And remember, I am with you always, to the end of the age."');
-COMMIT
+COMMIT;

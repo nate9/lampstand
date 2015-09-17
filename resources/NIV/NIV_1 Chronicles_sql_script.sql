@@ -1883,4 +1883,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Chronicles', 29, 29, 'As for the events of King David''s reign, from beginning to end, they are written in the records of Samuel the seer, the records of Nathan the prophet and the records of Gad the seer,');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Chronicles', 29, 30, 'together with the details of his reign and power, and the circumstances that surrounded him and Israel and the kingdoms of all the other lands.');
-COMMIT
+COMMIT;

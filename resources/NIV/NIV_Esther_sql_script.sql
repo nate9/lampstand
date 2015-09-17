@@ -333,4 +333,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Esther', 10, 2, 'And all his acts of power and might, together with a full account of the greatness of Mordecai to which the king had raised him, are they not written in the book of the annals of the kings of Media and Persia?');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Esther', 10, 3, 'Mordecai the Jew was second in rank to King Xerxes, pre-eminent among the Jews, and held in high esteem by his many fellow Jews, because he worked for the good of his people and spoke up for the welfare of all the Jews.');
-COMMIT
+COMMIT;

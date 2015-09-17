@@ -443,4 +443,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Ecclesiastes', 12, 13, 'When all has been heard, the conclusion of the matter is: fear God and keep His commands, because this [is for] all humanity.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Ecclesiastes', 12, 14, 'For God will bring every act to judgment, including every hidden thing, whether good or evil.');
-COMMIT
+COMMIT;

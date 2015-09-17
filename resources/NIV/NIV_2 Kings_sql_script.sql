@@ -1437,4 +1437,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Kings', 25, 29, 'So Jehoiachin put aside his prison clothes and for the rest of his life ate regularly at the king''s table.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Kings', 25, 30, 'Day by day the king gave Jehoiachin a regular allowance as long as he lived.');
-COMMIT
+COMMIT;

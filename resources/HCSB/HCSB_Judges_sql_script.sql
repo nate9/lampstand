@@ -1235,4 +1235,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Judges', 21, 24, 'At that time, each of the Israelites returned from there to his own tribe and family. Each returned from there to his own inheritance.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Judges', 21, 25, 'In those days there was no king in Israel; everyone did whatever he wanted.');
-COMMIT
+COMMIT;

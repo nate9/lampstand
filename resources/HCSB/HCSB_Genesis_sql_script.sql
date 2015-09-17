@@ -3065,4 +3065,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Genesis', 50, 25, 'So Joseph made the Israelites take an oath: "When God comes to your aid, you are to carry my bones up from here."');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Genesis', 50, 26, 'Joseph died at the age of 110. They embalmed him and placed him in a coffin in Egypt.');
-COMMIT
+COMMIT;

@@ -307,4 +307,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Lamentations', 5, 21, 'Restore us to yourself, O LORD, that we may be restored! Renew our days as of old-');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Lamentations', 5, 22, 'unless you have utterly rejected us, and you remain exceedingly angry with us.');
-COMMIT
+COMMIT;

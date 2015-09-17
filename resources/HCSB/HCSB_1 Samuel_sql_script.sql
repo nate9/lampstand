@@ -1619,4 +1619,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Samuel', 31, 12, 'all their brave men set out, journeyed all night, and retrieved the body of Saul and the bodies of his sons from the wall of Beth-shan. When they arrived at Jabesh, they burned the bodies there.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Samuel', 31, 13, 'Afterwards, they took their bones and buried them under the tamarisk tree in Jabesh and fasted seven days.');
-COMMIT
+COMMIT;

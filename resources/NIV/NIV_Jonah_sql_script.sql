@@ -95,4 +95,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Jonah', 4, 10, 'But the LORD said, "You have been concerned about this vine, though you did not tend it or make it grow. It sprang up overnight and died overnight.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Jonah', 4, 11, 'But Nineveh has more than a hundred and twenty thousand people who cannot tell their right hand from their left, and many cattle as well. Should I not be concerned about that great city?"');
-COMMIT
+COMMIT;

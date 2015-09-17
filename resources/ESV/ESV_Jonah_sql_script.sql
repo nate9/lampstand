@@ -95,4 +95,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Jonah', 4, 10, 'And the LORD said, "You pity the plant, for which you did not labor, nor did you make it grow, which came into being in a night and perished in a night.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Jonah', 4, 11, 'And should not I pity Nineveh, that great city, in which there are more than 120,000 persons who do not know their right hand from their left, and also much cattle?"');
-COMMIT
+COMMIT;

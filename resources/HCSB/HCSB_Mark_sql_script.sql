@@ -1355,4 +1355,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Mark', 16, 19, 'Then after speaking to them, the Lord Jesus was taken up into heaven and sat down at the right hand of God.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Mark', 16, 20, 'And they went out and preached everywhere, the Lord working with them and confirming the word by the accompanying signs.]]');
-COMMIT
+COMMIT;

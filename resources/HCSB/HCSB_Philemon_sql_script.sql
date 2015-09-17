@@ -49,4 +49,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Philemon', 1, 24, 'Mark, Aristarchus, Demas, and Luke, my co-workers.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Philemon', 1, 25, 'The grace of the Lord Jesus Christ be with your spirit.');
-COMMIT
+COMMIT;

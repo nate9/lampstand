@@ -297,4 +297,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Galatians', 6, 17, 'From now on let no one cause me trouble, for I bear on my body the marks of Jesus.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Galatians', 6, 18, 'The grace of our Lord Jesus Christ be with your spirit, brothers. Amen.');
-COMMIT
+COMMIT;

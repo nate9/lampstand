@@ -2301,4 +2301,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Luke', 24, 52, 'After worshiping Him, they returned to Jerusalem with great joy.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Luke', 24, 53, 'And they were continually in the temple complex blessing God.');
-COMMIT
+COMMIT;

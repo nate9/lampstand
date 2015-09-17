@@ -1437,4 +1437,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Kings', 25, 29, 'So Jehoiachin changed his prison clothes, and he dined regularly in the presence of the king of Babylon for the rest of his life.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Kings', 25, 30, 'As for his allowance, a regular allowance was given to him by the king, a portion for each day, for the rest of his life.');
-COMMIT
+COMMIT;

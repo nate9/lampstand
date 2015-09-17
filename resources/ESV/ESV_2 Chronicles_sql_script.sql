@@ -1643,4 +1643,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '2 Chronicles', 36, 22, 'Now in the first year of Cyrus king of Persia, that the word of the LORD by the mouth of Jeremiah might be fulfilled, the LORD stirred up the spirit of Cyrus king of Persia, so that he made a proclamation throughout all his kingdom and also put it in writing:');
 INSERT INTO BIBLE VALUES 
 ('ESV', '2 Chronicles', 36, 23, '"Thus says Cyrus king of Persia, ''The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.''"');
-COMMIT
+COMMIT;

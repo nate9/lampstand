@@ -2425,4 +2425,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Exodus', 40, 37, 'but if the cloud did not lift, they did not set out-- until the day it lifted.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Exodus', 40, 38, 'So the cloud of the LORD was over the tabernacle by day, and fire was in the cloud by night, in the sight of all the house of Israel during all their travels.');
-COMMIT
+COMMIT;

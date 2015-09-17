@@ -1917,4 +1917,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Deuteronomy', 34, 11, '[He was unparalleled] for all the signs and wonders the LORD sent him to do against the land of Egypt-- to Pharaoh, to all his officials, and to all his land,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Deuteronomy', 34, 12, 'and for all the mighty [acts of] power and terrifying deeds that Moses performed in the sight of all Israel.');
-COMMIT
+COMMIT;

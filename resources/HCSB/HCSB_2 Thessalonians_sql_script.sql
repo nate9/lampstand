@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Thessalonians', 3, 17, 'This greeting is in my own hand-- Paul. This is a sign in every letter; this is how I write.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Thessalonians', 3, 18, 'The grace of our Lord Jesus Christ be with all of you.');
-COMMIT
+COMMIT;

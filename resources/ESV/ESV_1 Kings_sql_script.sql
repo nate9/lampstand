@@ -1631,4 +1631,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '1 Kings', 22, 52, 'He did what was evil in the sight of the LORD and walked in the way of his father and in the way of his mother and in the way of Jeroboam the son of Nebat, who made Israel to sin.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '1 Kings', 22, 53, 'He served Baal and worshiped him and provoked the LORD, the God of Israel, to anger in every way that his father had done.');
-COMMIT
+COMMIT;

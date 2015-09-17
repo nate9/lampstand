@@ -1757,4 +1757,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'John', 21, 24, 'This is the disciple who testifies to these things and who wrote them down. We know that his testimony is true.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'John', 21, 25, 'Jesus did many other things as well. If every one of them were written down, I suppose that even the whole world would not have room for the books that would be written.');
-COMMIT
+COMMIT;

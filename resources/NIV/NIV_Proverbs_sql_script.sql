@@ -1829,4 +1829,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Proverbs', 31, 30, 'Charm is deceptive, and beauty is fleeting; but a woman who fears the LORD is to be praised.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Proverbs', 31, 31, 'Give her the reward she has earned, and let her works bring her praise at the city gate.');
-COMMIT
+COMMIT;

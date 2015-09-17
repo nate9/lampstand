@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Nahum', 3, 18, 'King of Assyria, your shepherds slumber; your officers sleep. Your people are scattered across the mountains with no one to gather [them] together.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Nahum', 3, 19, 'There is no remedy for your injury; your wound is severe. All who hear the news about you will clap their hands because of you, for who has not experienced your constant cruelty?');
-COMMIT
+COMMIT;

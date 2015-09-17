@@ -29,4 +29,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '3 John', 1, 14, 'I hope to see you soon, and we will talk face to face.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '3 John', 1, 15, 'Peace be to you. The friends greet you. Greet the friends, every one of them.');
-COMMIT
+COMMIT;

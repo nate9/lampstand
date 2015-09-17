@@ -559,4 +559,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Ezra', 10, 43, 'Nebo''s descendants: Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, and Benaiah.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Ezra', 10, 44, 'All of these had married foreign women, and some of the wives had borne children.');
-COMMIT
+COMMIT;

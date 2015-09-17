@@ -2545,4 +2545,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Ezekiel', 48, 34, 'On the west side, which is one and a half [miles], there will be three gates: one, the gate of Gad; one, the gate of Asher; and one, the gate of Naphtali.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Ezekiel', 48, 35, 'The perimeter [of the city] will be six [miles], and the name of the city from that day on will be: Yahweh Is There."');
-COMMIT
+COMMIT;

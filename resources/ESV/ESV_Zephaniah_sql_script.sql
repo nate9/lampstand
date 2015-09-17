@@ -105,4 +105,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Zephaniah', 3, 19, 'Behold, at that time I will deal with all your oppressors. And I will save the lame and gather the outcast, and I will change their shame into praise and renown in all the earth.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Zephaniah', 3, 20, 'At that time I will bring you in, at the time when I gather you together; for I will make you renowned and praised among all the peoples of the earth, when I restore your fortunes before your eyes," says the LORD.');
-COMMIT
+COMMIT;

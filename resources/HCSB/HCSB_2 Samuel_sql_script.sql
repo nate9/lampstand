@@ -1389,4 +1389,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Samuel', 24, 24, 'The king answered Araunah, "No, I insist on buying it from you for a price, for I will not offer to the LORD my God burnt offerings that cost [me] nothing." David bought the threshing floor and the oxen for 50 ounces of silver.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Samuel', 24, 25, 'He built an altar to the LORD there and offered burnt offerings and fellowship offerings. Then the LORD answered prayer on behalf of the land, and the plague on Israel ended.');
-COMMIT
+COMMIT;

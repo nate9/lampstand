@@ -49,4 +49,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Jude', 1, 24, 'Now to Him who is able to protect you from stumbling and to make you stand in the presence of His glory, blameless and with great joy,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Jude', 1, 25, 'to the only God our Savior, through Jesus Christ our Lord, be glory, majesty, power, and authority before all time, now, and forever. Amen.');
-COMMIT
+COMMIT;

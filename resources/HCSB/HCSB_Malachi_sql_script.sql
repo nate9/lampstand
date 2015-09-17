@@ -109,4 +109,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Malachi', 4, 5, 'Look, I am going to send you Elijah the prophet before the great and awesome Day of the LORD comes.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Malachi', 4, 6, 'And he will turn the hearts of fathers to [their] children and the hearts of children to their fathers. Otherwise, I will come and strike the land with a curse."');
-COMMIT
+COMMIT;

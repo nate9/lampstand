@@ -1643,4 +1643,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Chronicles', 36, 22, 'In the first year of Cyrus king of Persia, in order to fulfil the word of the LORD spoken by Jeremiah, the LORD moved the heart of Cyrus king of Persia to make a proclamation throughout his realm and to put it in writing:');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Chronicles', 36, 23, '"This is what Cyrus king of Persia says: "`The LORD, the God of heaven, has given me all the kingdoms of the earth and he has appointed me to build a temple for him at Jerusalem in Judah. Anyone of his people among you--may the LORD his God be with him, and let him go up.''"');
-COMMIT
+COMMIT;

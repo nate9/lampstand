@@ -1619,4 +1619,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '1 Samuel', 31, 12, 'all the valiant men arose and went all night and took the body of Saul and the bodies of his sons from the wall of Beth-shan, and they came to Jabesh and burned them there.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '1 Samuel', 31, 13, 'And they took their bones and buried them under the tamarisk tree in Jabesh and fasted seven days.');
-COMMIT
+COMMIT;

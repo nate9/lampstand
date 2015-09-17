@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Thessalonians', 3, 17, 'I, Paul, write this greeting in my own hand, which is the distinguishing mark in all my letters. This is how I write.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Thessalonians', 3, 18, 'The grace of our Lord Jesus Christ be with you all.');
-COMMIT
+COMMIT;

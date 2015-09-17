@@ -93,4 +93,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Nahum', 3, 18, 'Your shepherds are asleep, O king of Assyria; your nobles slumber. Your people are scattered on the mountains with none to gather them.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Nahum', 3, 19, 'There is no easing your hurt; your wound is grievous. All who hear the news about you clap their hands over you. For upon whom has not come your unceasing evil?');
-COMMIT
+COMMIT;

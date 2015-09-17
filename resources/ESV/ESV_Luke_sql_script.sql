@@ -2301,4 +2301,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Luke', 24, 52, 'And they worshiped him and returned to Jerusalem with great joy,');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Luke', 24, 53, 'and were continually in the temple blessing God.');
-COMMIT
+COMMIT;

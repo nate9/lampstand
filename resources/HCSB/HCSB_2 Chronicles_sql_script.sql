@@ -1643,4 +1643,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '2 Chronicles', 36, 22, 'In the first year of Cyrus king of Persia, the word of the LORD spoken through Jeremiah was fulfilled. The LORD put it into the mind of King Cyrus of Persia to issue a proclamation throughout his entire kingdom and also [to put it] in writing:');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '2 Chronicles', 36, 23, 'This is what King Cyrus of Persia says: The LORD, the God of heaven, has given me all the kingdoms of the earth and has appointed me to build Him a temple at Jerusalem in Judah. Whoever among you of His people may go up, and may the LORD his God be with him.');
-COMMIT
+COMMIT;

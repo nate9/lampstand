@@ -3065,4 +3065,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Genesis', 50, 25, 'Then Joseph made the sons of Israel swear, saying, "God will surely visit you, and you shall carry up my bones from here."');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Genesis', 50, 26, 'So Joseph died, being 110 years old. They embalmed him, and he was put in a coffin in Egypt.');
-COMMIT
+COMMIT;

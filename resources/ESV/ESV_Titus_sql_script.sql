@@ -91,4 +91,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Titus', 3, 14, 'And let our people learn to devote themselves to good works, so as to help cases of urgent need, and not be unfruitful.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Titus', 3, 15, 'All who are with me send greetings to you. Greet those who love us in the faith. Grace be with you all.');
-COMMIT
+COMMIT;

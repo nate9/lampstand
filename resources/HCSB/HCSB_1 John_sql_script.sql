@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 John', 5, 20, 'And we know that the Son of God has come and has given us understanding so that we may know the true One. We are in the true One-- that is, in His Son Jesus Christ. He is the true God and eternal life.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 John', 5, 21, 'Little children, guard yourselves from idols.');
-COMMIT
+COMMIT;

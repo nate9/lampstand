@@ -91,4 +91,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Titus', 3, 14, 'Our people must learn to devote themselves to doing what is good, in order that they may provide for daily necessities and not live unproductive lives.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Titus', 3, 15, 'Everyone with me sends you greetings. Greet those who love us in the faith. Grace be with you all.');
-COMMIT
+COMMIT;

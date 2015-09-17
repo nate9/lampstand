@@ -2575,4 +2575,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Numbers', 36, 12, 'They married [men] from the clans of the descendants of Manasseh son of Joseph, and their inheritance remained within the tribe of their father''s clan.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Numbers', 36, 13, 'These are the commands and ordinances the LORD commanded the Israelites through Moses in the plains of Moab by the Jordan [across from] Jericho.');
-COMMIT
+COMMIT;

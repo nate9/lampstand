@@ -49,4 +49,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Philemon', 1, 24, 'And so do Mark, Aristarchus, Demas and Luke, my fellow-workers.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Philemon', 1, 25, 'The grace of the Lord Jesus Christ be with your spirit.');
-COMMIT
+COMMIT;

@@ -2301,4 +2301,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Luke', 24, 52, 'Then they worshipped him and returned to Jerusalem with great joy.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Luke', 24, 53, 'And they stayed continually at the temple, praising God.');
-COMMIT
+COMMIT;

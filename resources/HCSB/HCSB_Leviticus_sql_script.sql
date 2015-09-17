@@ -1717,4 +1717,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Leviticus', 27, 33, 'He is not to inspect whether it is good or bad, and he is not to make a substitution for it. But if he does make a substitution, both the animal and its substitute will be holy; they cannot be redeemed."');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Leviticus', 27, 34, 'These are the commands the LORD gave Moses for the Israelites on Mount Sinai.');
-COMMIT
+COMMIT;

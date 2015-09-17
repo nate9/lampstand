@@ -2575,4 +2575,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Numbers', 36, 12, 'They were married into the clans of the people of Manasseh the son of Joseph, and their inheritance remained in the tribe of their father''s clan.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Numbers', 36, 13, 'These are the commandments and the rules that the LORD commanded through Moses to the people of Israel in the plains of Moab by the Jordan at Jericho.');
-COMMIT
+COMMIT;

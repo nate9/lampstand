@@ -165,4 +165,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '2 Timothy', 4, 21, 'Do your best to come before winter. Eubulus sends greetings to you, as do Pudens and Linus and Claudia and all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '2 Timothy', 4, 22, 'The Lord be with your spirit. Grace be with you.');
-COMMIT
+COMMIT;

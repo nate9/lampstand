@@ -559,4 +559,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Ezra', 10, 43, 'From the descendants of Nebo: Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel and Benaiah.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Ezra', 10, 44, 'All these had married foreign women, and some of them had children by these wives.');
-COMMIT
+COMMIT;

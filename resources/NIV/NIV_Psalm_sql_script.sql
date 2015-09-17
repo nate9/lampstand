@@ -4921,4 +4921,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Psalm', 150, 5, 'praise him with the clash of cymbals, praise him with resounding cymbals.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Psalm', 150, 6, 'Let everything that has breath praise the LORD. Praise the LORD.');
-COMMIT
+COMMIT;

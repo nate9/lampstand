@@ -189,4 +189,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Colossians', 4, 17, 'And tell Archippus, "Pay attention to the ministry you have received in the Lord, so that you can accomplish it."');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Colossians', 4, 18, 'This greeting is in my own hand-- Paul. Remember my imprisonment. Grace be with you.');
-COMMIT
+COMMIT;

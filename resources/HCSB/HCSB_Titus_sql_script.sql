@@ -91,4 +91,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Titus', 3, 14, 'And our people must also learn to devote themselves to good works for cases of urgent need, so that they will not be unfruitful.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Titus', 3, 15, 'All those who are with me greet you. Greet those who love us in the faith. Grace be with all of you.');
-COMMIT
+COMMIT;

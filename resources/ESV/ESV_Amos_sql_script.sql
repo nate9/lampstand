@@ -291,4 +291,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Amos', 9, 14, 'I will restore the fortunes of my people Israel, and they shall rebuild the ruined cities and inhabit them; they shall plant vineyards and drink their wine, and they shall make gardens and eat their fruit.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Amos', 9, 15, 'I will plant them on their land, and they shall never again be uprooted out of the land that I have given them," says the LORD your God.');
-COMMIT
+COMMIT;

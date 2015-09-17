@@ -189,4 +189,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Colossians', 4, 17, 'And say to Archippus, "See that you fulfill the ministry that you have received in the Lord."');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Colossians', 4, 18, 'I, Paul, write this greeting with my own hand. Remember my chains. Grace be with you.');
-COMMIT
+COMMIT;

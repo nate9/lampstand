@@ -513,4 +513,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Corinthians', 13, 13, 'All the saints send their greetings.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Corinthians', 13, 14, 'May the grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with you all.');
-COMMIT
+COMMIT;

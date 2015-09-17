@@ -2727,4 +2727,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Jeremiah', 52, 33, 'So Jehoiachin put aside his prison clothes and for the rest of his life ate regularly at the king''s table.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Jeremiah', 52, 34, 'Day by day the king of Babylon gave Jehoiachin a regular allowance as long as he lived, till the day of his death.');
-COMMIT
+COMMIT;

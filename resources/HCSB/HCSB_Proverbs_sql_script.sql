@@ -1829,4 +1829,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Proverbs', 31, 30, 'Charm is deceptive and beauty is fleeting, but a woman who fears the LORD will be praised.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Proverbs', 31, 31, 'Give her the reward of her labor, and let her works praise her at the city gates.');
-COMMIT
+COMMIT;

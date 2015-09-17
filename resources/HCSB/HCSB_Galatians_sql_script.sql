@@ -297,4 +297,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Galatians', 6, 17, 'From now on, let no one cause me trouble, because I carry the marks of Jesus on my body.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Galatians', 6, 18, 'Brothers, the grace of our Lord Jesus Christ be with your spirit. Amen.');
-COMMIT
+COMMIT;

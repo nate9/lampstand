@@ -393,4 +393,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Hosea', 14, 8, 'O Ephraim, what more have I to do with idols? I will answer him and care for him. I am like a green pine tree; your fruitfulness comes from me."');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Hosea', 14, 9, 'Who is wise? He will realise these things. Who is discerning? He will understand them. The ways of the LORD are right; the righteous walk in them, but the rebellious stumble in them.');
-COMMIT
+COMMIT;

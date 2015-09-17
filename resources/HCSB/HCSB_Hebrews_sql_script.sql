@@ -605,4 +605,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Hebrews', 13, 24, 'Greet all your leaders and all the saints. Those who are from Italy greet you.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Hebrews', 13, 25, 'Grace be with all of you.');
-COMMIT
+COMMIT;

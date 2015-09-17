@@ -105,4 +105,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Zephaniah', 3, 19, 'At that time I will deal with all who oppressed you; I will rescue the lame and gather those who have been scattered. I will give them praise and honour in every land where they were put to shame.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Zephaniah', 3, 20, 'At that time I will gather you; at that time I will bring you home. I will give you honour and praise among all the peoples of the earth when I restore your fortunes before your very eyes," says the LORD.');
-COMMIT
+COMMIT;

@@ -177,4 +177,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Thessalonians', 5, 27, 'I charge you before the Lord to have this letter read to all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Thessalonians', 5, 28, 'The grace of our Lord Jesus Christ be with you.');
-COMMIT
+COMMIT;

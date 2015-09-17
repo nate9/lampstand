@@ -177,4 +177,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '1 Thessalonians', 5, 27, 'I put you under oath before the Lord to have this letter read to all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '1 Thessalonians', 5, 28, 'The grace of our Lord Jesus Christ be with you.');
-COMMIT
+COMMIT;

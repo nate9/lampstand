@@ -291,4 +291,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Amos', 9, 14, 'I will bring back my exiled people Israel; they will rebuild the ruined cities and live in them. They will plant vineyards and drink their wine; they will make gardens and eat their fruit.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Amos', 9, 15, 'I will plant Israel in their own land, never again to be uprooted from the land I have given them," says the LORD your God.');
-COMMIT
+COMMIT;

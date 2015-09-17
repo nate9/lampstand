@@ -873,4 +873,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Corinthians', 16, 23, 'The grace of our Lord Jesus be with you.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Corinthians', 16, 24, 'My love be with all of you in Christ Jesus.');
-COMMIT
+COMMIT;

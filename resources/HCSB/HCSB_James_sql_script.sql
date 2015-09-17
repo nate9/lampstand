@@ -215,4 +215,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'James', 5, 19, 'My brothers, if any among you strays from the truth, and someone turns him back,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'James', 5, 20, 'he should know that whoever turns a sinner from the error of his way will save his life from death and cover a multitude of sins.');
-COMMIT
+COMMIT;

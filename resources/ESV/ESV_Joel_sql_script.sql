@@ -145,4 +145,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Joel', 3, 20, 'But Judah shall be inhabited forever, and Jerusalem to all generations.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Joel', 3, 21, 'I will avenge their blood, blood I have not avenged, for the LORD dwells in Zion."');
-COMMIT
+COMMIT;

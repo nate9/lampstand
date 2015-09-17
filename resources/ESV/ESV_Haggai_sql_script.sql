@@ -75,4 +75,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Haggai', 2, 22, 'and to overthrow the throne of kingdoms. I am about to destroy the strength of the kingdoms of the nations, and overthrow the chariots and their riders. And the horses and their riders shall go down, every one by the sword of his brother.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Haggai', 2, 23, 'On that day, declares the LORD of hosts, I will take you, O Zerubbabel my servant, the son of Shealtiel, declares the LORD, and make you like a signet ring, for I have chosen you, declares the LORD of hosts."');
-COMMIT
+COMMIT;

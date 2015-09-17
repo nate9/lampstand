@@ -2139,4 +2139,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Job', 42, 16, 'After this, Job lived a hundred and forty years; he saw his children and their children to the fourth generation.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Job', 42, 17, 'And so he died, old and full of years.');
-COMMIT
+COMMIT;

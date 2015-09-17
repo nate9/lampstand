@@ -2013,4 +2013,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Acts', 28, 30, 'Then he stayed two whole years in his own rented house. And he welcomed all who visited him,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Acts', 28, 31, 'proclaiming the kingdom of God and teaching the things concerning the Lord Jesus Christ with full boldness and without hindrance.');
-COMMIT
+COMMIT;

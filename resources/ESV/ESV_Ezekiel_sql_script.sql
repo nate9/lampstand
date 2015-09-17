@@ -2545,4 +2545,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Ezekiel', 48, 34, 'On the west side, which is to be 4,500 cubits, three gates, the gate of Gad, the gate of Asher, and the gate of Naphtali.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Ezekiel', 48, 35, 'The circumference of the city shall be 18,000 cubits. And the name of the city from that time on shall be, The LORD is there."');
-COMMIT
+COMMIT;

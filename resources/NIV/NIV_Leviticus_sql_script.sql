@@ -1717,4 +1717,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Leviticus', 27, 33, 'He must not pick out the good from the bad or make any substitution. If he does make a substitution, both the animal and its substitute become holy and cannot be redeemed.''"');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Leviticus', 27, 34, 'These are the commands the LORD gave Moses on Mount Sinai for the Israelites.');
-COMMIT
+COMMIT;

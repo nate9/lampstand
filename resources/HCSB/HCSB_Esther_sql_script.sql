@@ -333,4 +333,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Esther', 10, 2, 'All of his powerful and magnificent accomplishments and the detailed account of Mordecai''s great rank to which the king had promoted him, have they not been written in the court record of daily events of the kings of Media and Persia?');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Esther', 10, 3, 'Mordecai the Jew was second only to King Ahasuerus, famous among the Jews, and highly popular with many of his relatives. He continued to seek good for his people and to speak for the welfare of all his kindred.');
-COMMIT
+COMMIT;

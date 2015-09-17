@@ -2583,4 +2583,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Isaiah', 66, 23, 'From one New Moon to another and from one Sabbath to another, all mankind will come and bow down before me," says the LORD.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Isaiah', 66, 24, '"And they will go out and look upon the dead bodies of those who rebelled against me; their worm will not die, nor will their fire be quenched, and they will be loathsome to all mankind."');
-COMMIT
+COMMIT;

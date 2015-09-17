@@ -75,4 +75,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Haggai', 2, 22, 'I will overturn royal thrones and destroy the power of the Gentile kingdoms. I will overturn chariots and their riders. Horses and their riders will fall, each by his brother''s sword.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Haggai', 2, 23, 'On that day"-- the declaration of the LORD of Hosts-- "I will take you, Zerubbabel son of Shealtiel, My servant"-- the LORD''s declaration-- "and make you like My signet ring, for I have chosen you." [This is] the declaration of the LORD of Hosts.');
-COMMIT
+COMMIT;

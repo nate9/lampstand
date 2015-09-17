@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Micah', 7, 19, 'You will again have compassion on us; you will tread our sins underfoot and hurl all our iniquities into the depths of the sea.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Micah', 7, 20, 'You will be true to Jacob, and show mercy to Abraham, as you pledged on oath to our fathers in days long ago.');
-COMMIT
+COMMIT;

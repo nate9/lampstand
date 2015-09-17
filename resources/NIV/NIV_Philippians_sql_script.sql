@@ -207,4 +207,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Philippians', 4, 22, 'All the saints send you greetings, especially those who belong to Caesar''s household.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Philippians', 4, 23, 'The grace of the Lord Jesus Christ be with your spirit. Amen.');
-COMMIT
+COMMIT;

@@ -41,4 +41,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Obadiah', 1, 20, 'This company of Israelite exiles who are in Canaan will possess [the land] as far as Zarephath; the exiles from Jerusalem who are in Sepharad will possess the towns of the Negev.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Obadiah', 1, 21, 'Deliverers will go up on Mount Zion to govern the mountains of Esau. And the kingdom will be the LORD''s.');
-COMMIT
+COMMIT;

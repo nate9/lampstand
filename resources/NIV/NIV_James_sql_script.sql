@@ -215,4 +215,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'James', 5, 19, 'My brothers, if one of you should wander from the truth and someone should bring him back,');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'James', 5, 20, 'remember this: Whoever turns a sinner from the error of his way will save him from death and cover over a multitude of sins.');
-COMMIT
+COMMIT;

@@ -177,4 +177,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Thessalonians', 5, 27, 'I charge you by the Lord that this letter be read to all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Thessalonians', 5, 28, 'May the grace of our Lord Jesus Christ be with you!');
-COMMIT
+COMMIT;

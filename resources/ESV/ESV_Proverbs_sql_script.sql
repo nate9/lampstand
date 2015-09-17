@@ -1829,4 +1829,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Proverbs', 31, 30, 'Charm is deceitful, and beauty is vain, but a woman who fears the LORD is to be praised.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Proverbs', 31, 31, 'Give her of the fruit of her hands, and let her works praise her in the gates.');
-COMMIT
+COMMIT;

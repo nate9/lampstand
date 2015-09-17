@@ -233,4 +233,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Song of Solomon', 8, 13, 'You who dwell in the gardens-- companions are listening for your voice-- let me hear you!');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Song of Solomon', 8, 14, 'Hurry [to me], my love, and be like a gazelle or a young stag on the mountains of spices.');
-COMMIT
+COMMIT;

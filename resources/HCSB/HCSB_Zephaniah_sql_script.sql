@@ -105,4 +105,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Zephaniah', 3, 19, 'Yes, at that time I will deal with all who afflict you. I will save the lame and gather the scattered; I will make those who were disgraced throughout the earth receive praise and fame.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Zephaniah', 3, 20, 'At that time I will bring you back, yes, at the time I will gather you. I will make you famous and praiseworthy among all the peoples of the earth, when I restore your fortunes before your eyes. Yahweh has spoken.');
-COMMIT
+COMMIT;

@@ -1631,4 +1631,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Kings', 22, 52, 'He did evil in the eyes of the LORD, because he walked in the ways of his father and mother and in the ways of Jeroboam son of Nebat, who caused Israel to sin.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Kings', 22, 53, 'He served and worshipped Baal and provoked the LORD, the God of Israel, to anger, just as his father had done.');
-COMMIT
+COMMIT;

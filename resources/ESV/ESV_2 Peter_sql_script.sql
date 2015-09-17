@@ -121,4 +121,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '2 Peter', 3, 17, 'You therefore, beloved, knowing this beforehand, take care that you are not carried away with the error of lawless people and lose your own stability.');
 INSERT INTO BIBLE VALUES 
 ('ESV', '2 Peter', 3, 18, 'But grow in the grace and knowledge of our Lord and Savior Jesus Christ. To him be the glory both now and to the day of eternity. Amen.');
-COMMIT
+COMMIT;

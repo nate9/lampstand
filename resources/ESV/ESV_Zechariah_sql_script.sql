@@ -421,4 +421,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Zechariah', 14, 20, 'And on that day there shall be inscribed on the bells of the horses, "Holy to the LORD." And the pots in the house of the LORD shall be as the bowls before the altar.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Zechariah', 14, 21, 'And every pot in Jerusalem and Judah shall be holy to the LORD of hosts, so that all who sacrifice may come and take of them and boil the meat of the sacrifice in them. And there shall no longer be a trader in the house of the LORD of hosts on that day.');
-COMMIT
+COMMIT;

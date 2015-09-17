@@ -109,4 +109,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Malachi', 4, 5, '"See, I will send you the prophet Elijah before that great and dreadful day of the LORD comes.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Malachi', 4, 6, 'He will turn the hearts of the fathers to their children, and the hearts of the children to their fathers; or else I will come and strike the land with a curse."');
-COMMIT
+COMMIT;

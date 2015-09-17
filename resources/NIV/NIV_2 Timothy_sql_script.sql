@@ -165,4 +165,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 Timothy', 4, 21, 'Do your best to get here before winter. Eubulus greets you, and so do Pudens, Linus, Claudia and all the brothers.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 Timothy', 4, 22, 'The Lord be with your spirit. Grace be with you.');
-COMMIT
+COMMIT;

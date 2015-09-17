@@ -309,4 +309,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Ephesians', 6, 23, 'Peace to the brothers, and love with faith, from God the Father and the Lord Jesus Christ.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Ephesians', 6, 24, 'Grace be with all who have undying love for our Lord Jesus Christ.');
-COMMIT
+COMMIT;

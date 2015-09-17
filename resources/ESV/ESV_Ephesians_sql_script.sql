@@ -309,4 +309,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Ephesians', 6, 23, 'Peace be to the brothers, and love with faith, from God the Father and the Lord Jesus Christ.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Ephesians', 6, 24, 'Grace be with all who love our Lord Jesus Christ with love incorruptible.');
-COMMIT
+COMMIT;

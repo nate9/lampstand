@@ -225,4 +225,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 Timothy', 6, 20, 'Timothy, guard what has been entrusted to your care. Turn away from godless chatter and the opposing ideas of what is falsely called knowledge,');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 Timothy', 6, 21, 'which some have professed and in so doing have wandered from the faith. Grace be with you.');
-COMMIT
+COMMIT;

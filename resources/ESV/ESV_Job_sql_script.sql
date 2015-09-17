@@ -2139,4 +2139,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Job', 42, 16, 'And after this Job lived 140 years, and saw his sons, and his sons'' sons, four generations.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Job', 42, 17, 'And Job died, an old man, and full of days.');
-COMMIT
+COMMIT;

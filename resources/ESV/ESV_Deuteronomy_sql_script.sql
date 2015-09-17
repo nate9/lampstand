@@ -1917,4 +1917,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Deuteronomy', 34, 11, 'none like him for all the signs and the wonders that the LORD sent him to do in the land of Egypt, to Pharaoh and to all his servants and to all his land,');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Deuteronomy', 34, 12, 'and for all the mighty power and all the great deeds of terror that Moses did in the sight of all Israel.');
-COMMIT
+COMMIT;

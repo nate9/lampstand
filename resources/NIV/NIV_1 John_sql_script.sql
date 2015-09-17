@@ -209,4 +209,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '1 John', 5, 20, 'We know also that the Son of God has come and has given us understanding, so that we may know him who is true. And we are in him who is true--even in his Son Jesus Christ. He is the true God and eternal life.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '1 John', 5, 21, 'Dear children, keep yourselves from idols.');
-COMMIT
+COMMIT;

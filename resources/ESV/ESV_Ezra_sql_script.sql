@@ -559,4 +559,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Ezra', 10, 43, 'Of the sons of Nebo: Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, and Benaiah.');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Ezra', 10, 44, 'All these had married foreign women, and some of the women had even borne children.');
-COMMIT
+COMMIT;

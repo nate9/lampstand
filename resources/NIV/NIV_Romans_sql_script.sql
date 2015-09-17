@@ -865,4 +865,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Romans', 16, 26, 'but now revealed and made known through the prophetic writings by the command of the eternal God, so that all nations might believe and obey him--');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Romans', 16, 27, 'to the only wise God be glory for ever through Jesus Christ! Amen.');
-COMMIT
+COMMIT;

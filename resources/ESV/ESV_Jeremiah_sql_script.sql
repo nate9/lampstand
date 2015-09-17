@@ -2727,4 +2727,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', 'Jeremiah', 52, 33, 'So Jehoiachin put off his prison garments. And every day of his life he dined regularly at the king''s table,');
 INSERT INTO BIBLE VALUES 
 ('ESV', 'Jeremiah', 52, 34, 'and for his allowance, a regular allowance was given him by the king according to his daily need, until the day of his death as long as he lived.');
-COMMIT
+COMMIT;

@@ -49,4 +49,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Jude', 1, 24, 'To him who is able to keep you from falling and to present you before his glorious presence without fault and with great joy--');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Jude', 1, 25, 'to the only God our Saviour be glory, majesty, power and authority, through Jesus Christ our Lord, before all ages, now and for evermore! Amen.');
-COMMIT
+COMMIT;

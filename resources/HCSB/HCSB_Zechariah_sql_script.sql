@@ -421,4 +421,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Zechariah', 14, 20, 'On that day, [the words] HOLY TO THE LORD will be on the bells of the horses. The pots in the house of the LORD will be like the sprinkling basins before the altar.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Zechariah', 14, 21, 'Every pot in Jerusalem and in Judah will be holy to the LORD of Hosts. Everyone who sacrifices will come and take some of the pots to cook in. And on that day there will no longer be a Canaanite in the house of the LORD of Hosts.');
-COMMIT
+COMMIT;

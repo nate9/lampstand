@@ -27,4 +27,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '3 John', 1, 13, 'I have much to write to you, but I do not want to do so with pen and ink.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '3 John', 1, 14, 'I hope to see you soon, and we will talk face to face. Peace to you. The friends here send their greetings. Greet the friends there by name.');
-COMMIT
+COMMIT;

@@ -25,4 +25,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', '2 John', 1, 12, 'I have much to write to you, but I do not want to use paper and ink. Instead, I hope to visit you and talk with you face to face, so that our joy may be complete.');
 INSERT INTO BIBLE VALUES 
 ('NIV', '2 John', 1, 13, 'The children of your chosen sister send their greetings.');
-COMMIT
+COMMIT;

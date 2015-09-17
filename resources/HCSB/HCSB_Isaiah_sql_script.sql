@@ -2583,4 +2583,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Isaiah', 66, 23, 'All mankind will come to worship Me, from one New Moon to another, and from one Sabbath to another," says the LORD.');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Isaiah', 66, 24, '"As they leave, they will see the dead bodies of the men who have rebelled against Me; for their maggots will never die, their fire will never go out, and they will be a horror to all mankind."');
-COMMIT
+COMMIT;

@@ -1883,4 +1883,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', '1 Chronicles', 29, 29, 'As for the events of King David''s [reign], from beginning to end, note that they are written about in the Events of Samuel the Seer, the Events of Nathan the Prophet, and the Events of Gad the Seer,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', '1 Chronicles', 29, 30, 'along with all his reign, his might, and the incidents that affected him and Israel and all the kingdoms of the [surrounding] lands.');
-COMMIT
+COMMIT;

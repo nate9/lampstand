@@ -1883,4 +1883,4 @@ INSERT INTO BIBLE VALUES
 ('ESV', '1 Chronicles', 29, 29, 'Now the acts of King David, from first to last, are written in the Chronicles of Samuel the seer, and in the Chronicles of Nathan the prophet, and in the Chronicles of Gad the seer,');
 INSERT INTO BIBLE VALUES 
 ('ESV', '1 Chronicles', 29, 30, 'with accounts of all his rule and his might and of the circumstances that came upon him and upon Israel and upon all the kingdoms of the countries.');
-COMMIT
+COMMIT;

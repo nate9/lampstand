@@ -1315,4 +1315,4 @@ INSERT INTO BIBLE VALUES
 ('NIV', 'Joshua', 24, 32, 'And Joseph''s bones, which the Israelites had brought up from Egypt, were buried at Shechem in the tract of land that Jacob bought for a hundred pieces of silver from the sons of Hamor, the father of Shechem. This became the inheritance of Joseph''s descendants.');
 INSERT INTO BIBLE VALUES 
 ('NIV', 'Joshua', 24, 33, 'And Eleazar son of Aaron died and was buried at Gibeah, which had been allotted to his son Phinehas in the hill country of Ephraim.');
-COMMIT
+COMMIT;

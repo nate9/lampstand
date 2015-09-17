@@ -307,4 +307,4 @@ INSERT INTO BIBLE VALUES
 ('HCSB', 'Lamentations', 5, 21, 'LORD, restore us to Yourself, so we may return; renew our days as in former times,');
 INSERT INTO BIBLE VALUES 
 ('HCSB', 'Lamentations', 5, 22, 'unless You have completely rejected us and are intensely angry with us.');
-COMMIT
+COMMIT;
