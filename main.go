@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"os"
 )
 
 type PassageService struct {
@@ -34,6 +35,11 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 	version := ps.ByName("version")
 	params := r.URL.Query()
 	passagequery := params.Get("passage")
+	if passagequery == "" {
+		http.Error(w, "passage query parameter not defined", 400)
+		return
+	}
+
 	fmt.Println(passagequery)
 	pq := parsePassage(passagequery)
 	var passage Passage
@@ -45,7 +51,17 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 	} else {
 		passage, err = s.dao.FindChapter(version, pq.book, pq.chapter)
 	}
-	checkErr(err)
+	if err != nil {
+		http.Error(w, err.Error(), 500)
+		return
+	}
+
+	if len(passage.Verses) == 0 {
+		log.Println("passage not found")
+		http.Error(w, "No such passage exists", 404)
+		return
+	}
+
 	passageJson := ToJson(passage)
 	fmt.Fprint(w, string(passageJson))
 }
@@ -76,16 +92,21 @@ func parsePassage(passagequery string) (pq PassageQuery) {
 }
 
 func main() {
-	service := NewPassageService("./bible.db")
+	service := NewPassageService("./hcsb.db")
 	router := httprouter.New()
-	router.GET("/api/:version/verses", service.findVerses)
+	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
+	if bind == ":" {
+		bind = "localhost:8080"
+	}
+	fmt.Println("Serving lampstand on : " + bind)
+	router.GET("/api/verses", service.findVerses)
 	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(bind, router))
 }
 
 func checkErr(err error) {
 	if err != nil {
 		fmt.Println(err)
-		log.Fatal(err)
+		log.Println(err)
 	}
 }
