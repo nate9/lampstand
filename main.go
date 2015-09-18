@@ -92,14 +92,14 @@ func parsePassage(passagequery string) (pq PassageQuery) {
 }
 
 func main() {
-	service := NewPassageService("./hcsb.db")
+	service := NewPassageService("./bible.db")
 	router := httprouter.New()
 	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
 	if bind == ":" {
 		bind = "localhost:8080"
 	}
 	fmt.Println("Serving lampstand on : " + bind)
-	router.GET("/api/verses", service.findVerses)
+	router.GET("/api/:version/verses", service.findVerses)
 	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
 	log.Fatal(http.ListenAndServe(bind, router))
 }
