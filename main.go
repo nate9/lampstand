@@ -100,7 +100,7 @@ func main() {
 	}
 	fmt.Println("Serving lampstand on : " + bind)
 	router.GET("/api/:version/verses", service.findVerses)
-	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
+	router.NotFound = http.FileServer(http.Dir("static"))
 	log.Fatal(http.ListenAndServe(bind, router))
 }
 
