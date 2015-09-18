@@ -57,10 +57,16 @@
 			<div class="col-lg-8">
 				<br/>
 				<br/>
-				<div class="input-group input-group-lg">
+				<div class="input-group">
 					<input type="text" id="passage" class="form-control" placeholder="Enter Bible Verse Here">
 					<span class="input-group-btn">
+						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: 150%">
+							<option value="HCSB">HCSB</option>
+							<option value="NIV">NIV</option>
+							<option value="ESV">ESV</option>
+						</select>
 						<button id="search" class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-search"></span>
 							Search
 						</button>
 					</span>
@@ -139,6 +145,7 @@
 
 		<script>
 			function SearchBar() {
+				this.$version = $("#version");
 				this.$passage = $("#passage");
 				this.$searchBtn = $("#search");
 				this.$slides = $(".slides");
@@ -148,8 +155,9 @@
 
 			SearchBar.prototype.search = function() {
 				console.log("Getting Data");
+				var encodedVersion = encodeURI(this.$version.val());
 				var encodedPassage = encodeURI(this.$passage.val());
-				var pqUrl = "/api/verses?passage=" + encodedPassage
+				var pqUrl = "/api/" + encodedVersion + "/verses?passage=" + encodedPassage
 
 				$.ajax({
 					url: pqUrl,

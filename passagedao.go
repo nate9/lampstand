@@ -15,9 +15,10 @@ type PassageDaoImpl struct {
 
 type PassageDao interface {
 	Setup(setupDir string)
-	FindChapter(book string, chapterNo int) (Passage, error)
-	FindVerse(book string, chapterNo int, verseNo int) (Passage, error)
-	FindVerses(book string, chapterNo int, verseBegin int, verseEnd int) (Passage, error)
+	GetVersions() ([]string, error)
+	FindChapter(version string, book string, chapterNo int) (Passage, error)
+	FindVerse(version string, book string, chapterNo int, verseNo int) (Passage, error)
+	FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (Passage, error)
 	Close()
 }
 
@@ -58,23 +59,42 @@ func insertBookIntoDb(path string, db *sql.DB) {
 	checkErr(err)
 }
 
-func (p *PassageDaoImpl) FindChapter(book string, chapterNo int) (result Passage, err error) {
-	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK LIKE ? + AND CHAPTER = ?", book + "%", chapterNo)
+func (p *PassageDaoImpl) GetVersions() (result []string, err error) {
+	query := "SELECT * FROM VERSIONS"
+	rows, err := p.db.Query(query)
+	if err != nil {
+		fmt.Println(err)
+	}
+	result = []string{}
+	for rows.Next() {
+		var version string
+		var info string
+		var copyright string
+		rows.Scan(&version, &info, &copyright)
+		result = append(result, version)
+	}
+	return result, err
+}
+
+func (p *PassageDaoImpl) FindChapter(version string, book string, chapterNo int) (result Passage, err error) {
+	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? + AND CHAPTER = ?"
+	rows, err := p.db.Query(query, version, book + "%", chapterNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindVerse(book string, chapterNo int, verseNo int) (result Passage, err error) {
-	rows, err := p.db.Query("SELECT * FROM BIBLE WHERE BOOK LIKE ? AND CHAPTER = ? AND VERSE = ?", book + "%", chapterNo, verseNo)
+func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, verseNo int) (result Passage, err error) {
+	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE = ?"
+	rows, err := p.db.Query(query, version, book + "%", chapterNo, verseNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindVerses(book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
-	query := "SELECT * FROM BIBLE WHERE BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
-	rows, err := p.db.Query(query, book + "%", chapterNo, verseBegin, verseEnd)
+func (p *PassageDaoImpl) FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
+	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
+	rows, err := p.db.Query(query, version, book + "%", chapterNo, verseBegin, verseEnd)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err

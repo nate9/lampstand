@@ -31,7 +31,8 @@ func NewPassageService(db string) *PassageService {
 	return service
 }
 
-func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	version := ps.ByName("version")
 	params := r.URL.Query()
 	passagequery := params.Get("passage")
 	if passagequery == "" {
@@ -44,11 +45,11 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, _ ht
 	var passage Passage
 	var err error
 	if pq.end != -1 {
-		passage, err = s.dao.FindVerses(pq.book, pq.chapter, pq.begin, pq.end)
+		passage, err = s.dao.FindVerses(version, pq.book, pq.chapter, pq.begin, pq.end)
 	} else if pq.begin != -1 {
-		passage, err = s.dao.FindVerse(pq.book, pq.chapter, pq.begin)
+		passage, err = s.dao.FindVerse(version, pq.book, pq.chapter, pq.begin)
 	} else {
-		passage, err = s.dao.FindChapter(pq.book, pq.chapter)
+		passage, err = s.dao.FindChapter(version, pq.book, pq.chapter)
 	}
 	if err != nil {
 		http.Error(w, err.Error(), 500)
@@ -91,15 +92,15 @@ func parsePassage(passagequery string) (pq PassageQuery) {
 }
 
 func main() {
-	service := NewPassageService("./hcsb.db")
+	service := NewPassageService("./bible.db")
 	router := httprouter.New()
 	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
 	if bind == ":" {
 		bind = "localhost:8080"
 	}
 	fmt.Println("Serving lampstand on : " + bind)
-	router.GET("/api/verses", service.findVerses)
-	router.ServeFiles("/lampstand/*filepath", http.Dir("static"))
+	router.GET("/api/:version/verses", service.findVerses)
+	router.NotFound = http.FileServer(http.Dir("static"))
 	log.Fatal(http.ListenAndServe(bind, router))
 }
 

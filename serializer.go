@@ -20,8 +20,9 @@ type Passage struct {
 func ToPassage(rs *sql.Rows) Passage {
 	p := Passage{Verses: []Verse{}}
 	for rs.Next() {
+		var version string
 		v := new(Verse)
-		rs.Scan(&v.Book, &v.Chapter, &v.VerseNo, &v.Text)
+		rs.Scan(&version, &v.Book, &v.Chapter, &v.VerseNo, &v.Text)
 		p.Verses = append(p.Verses, *v)
 	}
 	return p
