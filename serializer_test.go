@@ -40,8 +40,8 @@ func TestToPassage(t *testing.T) {
 	}
 	defer db.Close()
 
-	rows := sqlmock.NewRows([]string{"BOOK", "CHAPTER", "VERSE", "TEXT"}).
-		AddRow("Genesis", 1, 1, "In the beginning")
+	rows := sqlmock.NewRows([]string{"VERSION", "BOOK", "CHAPTER", "VERSE", "TEXT"}).
+		AddRow("HCSB", "Genesis", 1, 1, "In the beginning")
 
 	mock.ExpectQuery("^SELECT (.+) FROM BIBLE").WillReturnRows(rows)
 
