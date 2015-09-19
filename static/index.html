@@ -37,9 +37,12 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-		<script></script>
-
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<style>
+			.input-group .form-control select {
+				width: auto;
+			}
+		</style>
 		<!-- Latest compiled and minified JavaScript -->
 		<!--
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -52,15 +55,13 @@
 	<body>
 
 		<div class="container">
-			<div class="col-lg-2">
-			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-6 col-md-offset-2">
 				<br/>
 				<br/>
 				<div class="input-group">
 					<input type="text" id="passage" class="form-control" placeholder="Enter Bible Verse Here">
 					<span class="input-group-btn">
-						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: 150%">
+						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: auto">
 							<option value="HCSB">HCSB</option>
 							<option value="NIV">NIV</option>
 							<option value="ESV">ESV</option>
@@ -71,8 +72,6 @@
 						</button>
 					</span>
 				</div>
-			</div>
-			<div class="col-lg-2">
 			</div>
 		</div>
 
