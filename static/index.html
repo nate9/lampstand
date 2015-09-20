@@ -20,6 +20,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/lampstand.css">
 
 		<!-- Latest compiled and minified CSS -->
 		<!--
@@ -167,13 +168,17 @@
 
 			SearchBar.prototype._render = function(data) {
 				var passage = data.Verses;
-				var newSlide = document.createElement("section");
-				this.$slides.append(newSlide);
-
+				var newPassage = document.createElement("section");
+				this.$slides.append(newPassage);
+				var newSection;
+				var fragments = 3;
 				for(var i = 0; i < passage.length; i++) {
 					var text = passage[i].Text;
 					var verseNo = passage[i].VerseNo;
-					$("<section><blockquote><sup>" + verseNo +"</sup> " + text + "</blockquote></section>").appendTo(newSlide);
+					if(i % fragments == 0) {
+						newSection = $("<section>").appendTo(newPassage);
+					}
+					newSection.append($("<span class='passage fragment'> <sup>" + verseNo +"</sup>" + text +"</span>"));
 				}
 				Reveal.sync();
 			}
