@@ -3,10 +3,10 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	_ "github.com/mattn/go-sqlite3"
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	_ "github.com/mattn/go-sqlite3"
 )
 
 type PassageDaoImpl struct {
@@ -78,7 +78,7 @@ func (p *PassageDaoImpl) GetVersions() (result []string, err error) {
 
 func (p *PassageDaoImpl) FindChapter(version string, book string, chapterNo int) (result Passage, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? + AND CHAPTER = ?"
-	rows, err := p.db.Query(query, version, book + "%", chapterNo)
+	rows, err := p.db.Query(query, version, book+"%", chapterNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
@@ -86,7 +86,7 @@ func (p *PassageDaoImpl) FindChapter(version string, book string, chapterNo int)
 
 func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, verseNo int) (result Passage, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE = ?"
-	rows, err := p.db.Query(query, version, book + "%", chapterNo, verseNo)
+	rows, err := p.db.Query(query, version, book+"%", chapterNo, verseNo)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
@@ -94,7 +94,7 @@ func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, v
 
 func (p *PassageDaoImpl) FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
-	rows, err := p.db.Query(query, version, book + "%", chapterNo, verseBegin, verseEnd)
+	rows, err := p.db.Query(query, version, book+"%", chapterNo, verseBegin, verseEnd)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err

@@ -45,7 +45,7 @@ func TestShouldLookForAVerse(t *testing.T) {
 	mockRows := sqlmock.NewRows([]string{"VERSION", "BOOK", "CHAPTER", "VERSE", "TEXT"})
 	mockRows.AddRow("HCSB", "Genesis", 1, 1, "In the beginning")
 	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND CHAPTER = (.+) AND VERSE = (.+)").
-		 WithArgs("HCSB", "Genesis%", 1, 1).WillReturnRows(mockRows)
+		WithArgs("HCSB", "Genesis%", 1, 1).WillReturnRows(mockRows)
 	p := TestPassageDao(db)
 	_, err = p.FindVerse("HCSB", "Genesis", 1, 1)
 
@@ -65,7 +65,7 @@ func TestShouldLookForAPassage(t *testing.T) {
 	mockRows.AddRow("HCSB", "Genesis", 1, 1, "In the beginning")
 	mockRows.AddRow("HCSB", "Genesis", 1, 2, "God created the heavens")
 	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND CHAPTER = (.+) AND VERSE BETWEEN (.+) and (.+)").
-	     WithArgs("HCSB", "Genesis%", 1, 1, 2).WillReturnRows(mockRows)
+		WithArgs("HCSB", "Genesis%", 1, 1, 2).WillReturnRows(mockRows)
 	p := TestPassageDao(db)
 	_, err = p.FindVerses("HCSB", "Genesis", 1, 1, 2)
 
