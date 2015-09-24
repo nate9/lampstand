@@ -167,14 +167,14 @@
 			}
 
 			SearchBar.prototype._render = function(data) {
-				var passage = data.Verses;
+				var passage = data.verses;
 				var newPassage = document.createElement("section");
 				this.$slides.append(newPassage);
 				var newSection;
 				var fragments = 3;
 				for(var i = 0; i < passage.length; i++) {
-					var text = passage[i].Text;
-					var verseNo = passage[i].VerseNo;
+					var text = passage[i].text;
+					var verseNo = passage[i].verseNo;
 					if(i % fragments == 0) {
 						newSection = $("<section>").appendTo(newPassage);
 					}

@@ -7,14 +7,14 @@ import (
 )
 
 type Verse struct {
-	Book    string
-	Chapter float64
-	VerseNo float64
-	Text    string
+	Book    string  `json:"book"`
+	Chapter float64 `json:"chapter"`
+	VerseNo float64 `json:"verseNo"`
+	Text    string  `json:"text"`
 }
 
 type Passage struct {
-	Verses []Verse
+	Verses []Verse `json:"verses"`
 }
 
 func ToPassage(rs *sql.Rows) Passage {

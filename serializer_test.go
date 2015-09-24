@@ -17,7 +17,7 @@ func TestToJson(t *testing.T) {
 			},
 		},
 	}
-	e := "{\"Verses\":[{\"Book\":\"Genesis\",\"Chapter\":1,\"VerseNo\":1,\"Text\":\"In the beginning\"}]}"
+	e := "{\"verses\":[{\"book\":\"Genesis\",\"chapter\":1,\"verseNo\":1,\"text\":\"In the beginning\"}]}"
 	cases := []struct {
 		in   Passage
 		want string
