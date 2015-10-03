@@ -64,7 +64,7 @@ func TestShouldLookForAPassage(t *testing.T) {
 	mockRows := sqlmock.NewRows([]string{"VERSION", "BOOK", "CHAPTER", "VERSE", "TEXT"})
 	mockRows.AddRow("HCSB", "Genesis", 1, 1, "In the beginning")
 	mockRows.AddRow("HCSB", "Genesis", 1, 2, "God created the heavens")
-	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND CHAPTER = (.+) AND VERSE BETWEEN (.+) and (.+)").
+	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND CHAPTER = (.+) AND VERSE BETWEEN (.+) AND (.+)").
 		WithArgs("HCSB", "Genesis%", 1, 1, 2).WillReturnRows(mockRows)
 	p := TestPassageDao(db)
 	_, err = p.FindVerses("HCSB", "Genesis", 1, 1, 2)
@@ -87,6 +87,26 @@ func TestShouldLookForAChapter(t *testing.T) {
 	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND CHAPTER = (.+)").WithArgs("HCSB", "Genesis%", 1).WillReturnRows(mockRows)
 	p := TestPassageDao(db)
 	_, err = p.FindChapter("HCSB", "Genesis", 1)
+
+	if err := mock.ExpectationsWereMet(); err != nil {
+		t.Errorf("there were unfulfilled expectations: %s", err)
+	}
+}
+
+func TestShouldLookForMultiChapterPassage(t *testing.T) {
+	db, mock, err := sqlmock.New()
+	if err != nil {
+		t.Fatalf("an error '%s' was not expected when opening a stub database connection", err)
+	}
+
+	defer db.Close()
+	mockRows := sqlmock.NewRows([]string{"VERSION", "BOOK", "CHAPTER", "VERSE", "TEXT"})
+	mockRows.AddRow("HCSB", "Genesis", 1, 1, "In the beginning")
+	mockRows.AddRow("HCSB", "Genesis", 2, 10, "God created the heavens")
+	mock.ExpectQuery("^SELECT (.+) FROM BIBLE WHERE VERSION = (.+) AND BOOK LIKE (.+) AND \\(\\(CHAPTER = (.+) AND VERSE >= (.+)\\) OR \\(CHAPTER = (.+) AND VERSE <= (.+)[\\)\\)]").
+		WithArgs("HCSB", "Genesis%", 1, 1, 2, 10).WillReturnRows(mockRows)
+	p := TestPassageDao(db)
+	_, err = p.FindMultiChapterPassage("HCSB", "Genesis", 1, 2, 1, 10)
 
 	if err := mock.ExpectationsWereMet(); err != nil {
 		t.Errorf("there were unfulfilled expectations: %s", err)

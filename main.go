@@ -15,10 +15,11 @@ type PassageService struct {
 }
 
 type PassageQuery struct {
-	book    string
-	chapter int
-	begin   int
-	end     int
+	book       string
+	chapter    int
+	chapterEnd int
+	begin      int
+	end        int
 }
 
 func NewPassageService(db string) *PassageService {
@@ -44,7 +45,9 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 	pq := parsePassage(passagequery)
 	var passage Passage
 	var err error
-	if pq.end != -1 {
+	if pq.chapterEnd != -1 {
+		passage, err = s.dao.FindMultiChapterPassage(version, pq.book, pq.chapter, pq.chapterEnd, pq.begin, pq.end)
+	} else if pq.end != -1 {
 		passage, err = s.dao.FindVerses(version, pq.book, pq.chapter, pq.begin, pq.end)
 	} else if pq.begin != -1 {
 		passage, err = s.dao.FindVerse(version, pq.book, pq.chapter, pq.begin)
@@ -67,12 +70,13 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 }
 
 func parsePassage(passagequery string) (pq PassageQuery) {
-	pq = PassageQuery{book: "", chapter: -1, begin: -1, end: -1}
+	pq = PassageQuery{book: "", chapter: -1, chapterEnd: -1, begin: -1, end: -1}
 	passagequery = strings.TrimSpace(passagequery)
 	end := len(passagequery)
 	lastspace := strings.LastIndex(passagequery, " ")
 	pq.book = passagequery[:lastspace]
 	colon := strings.Index(passagequery, ":")
+	secondColon := strings.LastIndex(passagequery, ":")
 
 	if colon != -1 {
 		pq.chapter, _ = strconv.Atoi(passagequery[lastspace+1 : colon])
@@ -86,6 +90,11 @@ func parsePassage(passagequery string) (pq PassageQuery) {
 		pq.end, _ = strconv.Atoi(passagequery[hyphen+1 : end])
 	} else if hyphen == -1 && colon != -1 {
 		pq.begin, _ = strconv.Atoi(passagequery[colon+1 : end])
+	}
+
+	if colon != secondColon {
+		pq.chapterEnd, _ = strconv.Atoi(passagequery[hyphen+1 : secondColon])
+		pq.end, _ = strconv.Atoi(passagequery[secondColon+1 : end])
 	}
 
 	return pq
