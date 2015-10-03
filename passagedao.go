@@ -19,6 +19,7 @@ type PassageDao interface {
 	FindChapter(version string, book string, chapterNo int) (Passage, error)
 	FindVerse(version string, book string, chapterNo int, verseNo int) (Passage, error)
 	FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (Passage, error)
+	FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (Passage, error)
 	Close()
 }
 
@@ -93,8 +94,17 @@ func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, v
 }
 
 func (p *PassageDaoImpl) FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
-	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? and ?"
+	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? AND ?"
 	rows, err := p.db.Query(query, version, book+"%", chapterNo, verseBegin, verseEnd)
+	checkErr(err)
+	result = ToPassage(rows)
+	return result, err
+}
+
+func (p *PassageDaoImpl) FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (result Passage, err error) {
+	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND ((CHAPTER = ? AND VERSE >= ?) OR (CHAPTER = ? AND VERSE <= ?))"
+	orderby := "ORDER BY CHAPTER, VERSE"
+	rows, err := p.db.Query(query+orderby, version, book+"%", chapterStart, verseBegin, chapterEnd, verseEnd)
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
