@@ -4,6 +4,11 @@ section .lampstand {
 }
 
 div .passage {
-	font-size: 1.6em;
+	font-size: 1.5em;
 	line-height: 1;
+}
+
+div .reference{
+	font-weight: bold;
+	text-align: right;
 }
