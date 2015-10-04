@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"errors"
 )
 
 type PassageDaoImpl struct {
@@ -20,6 +21,7 @@ type PassageDao interface {
 	FindVerse(version string, book string, chapterNo int, verseNo int) (Passage, error)
 	FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (Passage, error)
 	FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (Passage, error)
+	FindBook(book string) (string, error)
 	Close()
 }
 
@@ -108,6 +110,21 @@ func (p *PassageDaoImpl) FindMultiChapterPassage(version string, book string, ch
 	checkErr(err)
 	result = ToPassage(rows)
 	return result, err
+}
+
+func (p *PassageDaoImpl) FindBook(bookLike string) (string, error) {
+	query := "SELECT DISTINCT BOOK FROM BIBLE WHERE BOOK LIKE ?"
+	rows, err := p.db.Query(query, bookLike+"%")
+	checkErr(err)
+
+	var book string
+	for rows.Next() {
+		rows.Scan(&book)
+	}
+	if(book == ""){
+		err = errors.New("Book not found")
+	}
+	return book, err
 }
 
 func (p *PassageDaoImpl) Close() {

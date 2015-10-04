@@ -191,6 +191,8 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 
 			SearchBar.prototype._render = function(data) {
 				var passage = data.verses;
+				var reference = data.reference;
+				var version = data.version;
 				var newPassage = document.createElement("section");
 				this.$slides.append(newPassage);
 				var newSection;
@@ -202,6 +204,9 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 						newSection = $("<section class='lampstand'>").appendTo(newPassage);
 					}
 					newSection.append($("<span class='passage fragment'> <sup>" + verseNo +"</sup>" + text +"</span>"));
+					if(i % fragments == fragments - 1) {
+						newSection.append($("<div class='reference'>" + reference + " (" + version + ")" + "</div>"));
+					}
 				}
 				Reveal.sync();
 			}
