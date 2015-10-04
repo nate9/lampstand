@@ -8,6 +8,8 @@ import (
 
 func TestToJson(t *testing.T) {
 	p := Passage{
+		"Genesis 1:1",
+		"NIV",
 		[]Verse{
 			Verse{
 				Book:    "Genesis",
@@ -17,7 +19,10 @@ func TestToJson(t *testing.T) {
 			},
 		},
 	}
-	e := "{\"verses\":[{\"book\":\"Genesis\",\"chapter\":1,\"verseNo\":1,\"text\":\"In the beginning\"}]}"
+	e := "{" +
+		"\"reference\":\"Genesis 1:1\"," +
+		"\"version\":\"NIV\"," +
+		"\"verses\":[{\"book\":\"Genesis\",\"chapter\":1,\"verseNo\":1,\"text\":\"In the beginning\"}]}"
 	cases := []struct {
 		in   Passage
 		want string
@@ -55,6 +60,8 @@ func TestToPassage(t *testing.T) {
 	result := ToPassage(rs)
 
 	want := Passage{
+		"",
+		"",
 		[]Verse{
 			Verse{
 				Book:    "Genesis",
