@@ -2,12 +2,12 @@ package main
 
 import (
 	"database/sql"
+	"errors"
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"errors"
 )
 
 type PassageDaoImpl struct {
@@ -121,7 +121,7 @@ func (p *PassageDaoImpl) FindBook(bookLike string) (string, error) {
 	for rows.Next() {
 		rows.Scan(&book)
 	}
-	if(book == ""){
+	if book == "" {
 		err = errors.New("Book not found")
 	}
 	return book, err

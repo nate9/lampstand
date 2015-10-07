@@ -14,15 +14,15 @@ type Verse struct {
 }
 
 type Passage struct {
-	Reference string `json:"reference"`
-	Version string `json:"version"`
-	Verses []Verse `json:"verses"`
+	Reference string  `json:"reference"`
+	Version   string  `json:"version"`
+	Verses    []Verse `json:"verses"`
 }
 
 func ToPassage(rs *sql.Rows) Passage {
 	p := Passage{Reference: "",
-				Version: "",
-				Verses: []Verse{}}
+		Version: "",
+		Verses:  []Verse{}}
 	for rs.Next() {
 		v := new(Verse)
 		var version string

@@ -73,9 +73,8 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 		return
 	}
 
-	passage.Version = version;
-	passage.Reference = reference;
-
+	passage.Version = version
+	passage.Reference = reference
 
 	passageJson := ToJson(passage)
 	fmt.Fprint(w, string(passageJson))
