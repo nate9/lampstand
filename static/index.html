@@ -204,10 +204,9 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 						newSection = $("<section>").appendTo(newPassage);
 					}
 					newSection.append($("<span class='passage fragment'> <sup>" + verseNo +"</sup>" + text +"</span>"));
-					if(i % fragments == fragments - 1) {
-						newSection.append($("<div class='reference'>" + reference + " (" + version + ")" + "</div>"));
-					}
 				}
+				$(newPassage).find("section").append($("<div class='reference'>" + reference + " (" + version + ")" + "</div>"));
+
 				Reveal.sync();
 			}
 
