@@ -1,0 +1,4 @@
+resources/* linguist-vendored
+static/js/reveal.js linguist-vendored
+static/lib/* linguist-vendored
+static/plugin/* linguist-vendored
