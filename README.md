@@ -12,7 +12,8 @@ The passage json object contains the reference, version, and a JSON array of ver
 ```
 
 ##Usage
-1) Get the Go dependencies by running bootstrap.sh
-2) Build the go project with go build
-3) Run setup_table.sh to create the bible.db sqlite database, and move it to the location of the binary
-4) Run the binary, it should be served at localhost:8080
+
+1. Get the Go dependencies by running bootstrap.sh
+2. Build the go project with go build
+3. Run setup_table.sh to create the bible.db sqlite database, and move it to the location of the binary
+4. Run the binary, it should be served at localhost:8080
