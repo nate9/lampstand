@@ -71,6 +71,9 @@
 							<span class="glyphicon glyphicon-search"></span>
 							Search
 						</button>
+						<button id="clear" class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-trash"></span>Delete All
+						</button>
 					</span>
 				</div>
 			</div>
@@ -140,7 +143,12 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script src="js/lampstand.js"></script>
+		<script>
+			var passageView = new PassageView();
+			var passageStore = new PassageStore(passageView);
+			var searchBar = new SearchBar(passageStore);
+		</script>
 		<script>
 
 			// Full list of configuration options available at:
@@ -164,53 +172,6 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 				]
 			});
 
-		</script>
-
-		<script>
-			function SearchBar() {
-				this.$version = $("#version");
-				this.$passage = $("#passage");
-				this.$searchBtn = $("#search");
-				this.$slides = $(".slides");
-				this.$searchBtn.on("click", this.search.bind(this))
-				this.passage = "";
-			}
-
-			SearchBar.prototype.search = function() {
-				console.log("Getting Data");
-				var encodedVersion = encodeURI(this.$version.val());
-				var encodedPassage = encodeURI(this.$passage.val());
-				var pqUrl = "/api/" + encodedVersion + "/verses?passage=" + encodedPassage
-
-				$.ajax({
-					url: pqUrl,
-					dataType: "json",
-					success: this._render.bind(this)
-				})
-			}
-
-			SearchBar.prototype._render = function(data) {
-				var passage = data.verses;
-				var reference = data.reference;
-				var version = data.version;
-				var newPassage = document.createElement("section");
-				this.$slides.append(newPassage);
-				var newSection;
-				var fragments = 2;
-				for(var i = 0; i < passage.length; i++) {
-					var text = passage[i].text;
-					var verseNo = passage[i].verseNo;
-					if(i % fragments == 0) {
-						newSection = $("<section class='lampstand'>").appendTo(newPassage);
-					}
-					newSection.append($("<span class='passage fragment'> <sup>" + verseNo +"</sup>" + text +"</span>"));
-				}
-				$(newPassage).find("section").append($("<div class='reference'>" + reference + " (" + version + ")" + "</div>"));
-
-				Reveal.sync();
-			}
-
-			var searchBar = new SearchBar();
 		</script>
 	</body>
 </html>
