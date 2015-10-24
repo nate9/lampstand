@@ -1,7 +1,7 @@
 # lampstand
 A service for automatically formatting Bible verses into HTML5 slides using revealJS. It uses SQLite for the database.
 
-##REST API
+## REST API
 The lampstand project uses a single path to service out verses at:  
 **/api/:version/verses?passage=Luke 11:33**  
 where :version is the version (NIV, HSCB, ESV), and the passage is the passage you wnat to look up.  
