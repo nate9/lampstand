@@ -1,5 +1,7 @@
 resources/* linguist-vendored
 static/css/* linguist-vendored
+static/css/print/* linguist-vendored
+static/css/theme/* linguist-vendored
 static/js/reveal.js linguist-vendored
 static/lib/**/* linguist-vendored
 static/plugin/**/* linguist-vendored
