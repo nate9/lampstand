@@ -43,23 +43,24 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 
 	fmt.Println(passagequery)
 	pq := parsePassage(passagequery)
-	var passage Passage
+	passage := *new(Passage)
+	var verses []Verse
 	var reference string
 	var err error
 
 	book, err := s.dao.FindBook(pq.book)
 
 	if pq.chapterEnd != -1 {
-		passage, err = s.dao.FindMultiChapterPassage(version, pq.book, pq.chapter, pq.chapterEnd, pq.begin, pq.end)
+		verses, err = s.dao.FindMultiChapterPassage(version, pq.book, pq.chapter, pq.chapterEnd, pq.begin, pq.end)
 		reference = fmt.Sprintf("%s %d:%d-%d:%d", book, pq.chapter, pq.begin, pq.chapterEnd, pq.end)
 	} else if pq.end != -1 {
-		passage, err = s.dao.FindVerses(version, pq.book, pq.chapter, pq.begin, pq.end)
+		verses, err = s.dao.FindVerses(version, pq.book, pq.chapter, pq.begin, pq.end)
 		reference = fmt.Sprintf("%s %d:%d-%d", book, pq.chapter, pq.begin, pq.end)
 	} else if pq.begin != -1 {
-		passage, err = s.dao.FindVerse(version, pq.book, pq.chapter, pq.begin)
+		verses, err = s.dao.FindVerse(version, pq.book, pq.chapter, pq.begin)
 		reference = fmt.Sprintf("%s %d:%d", book, pq.chapter, pq.begin)
 	} else {
-		passage, err = s.dao.FindChapter(version, pq.book, pq.chapter)
+		verses, err = s.dao.FindChapter(version, pq.book, pq.chapter)
 		reference = fmt.Sprintf("%s %d", book, pq.chapter)
 	}
 	if err != nil {
@@ -67,7 +68,7 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 		return
 	}
 
-	if len(passage.Verses) == 0 {
+	if len(verses) == 0 {
 		log.Println("passage not found")
 		http.Error(w, "No such passage exists", 404)
 		return
@@ -75,6 +76,7 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 
 	passage.Version = version
 	passage.Reference = reference
+	passage.Verses = verses
 
 	passageJson := ToJson(passage)
 	fmt.Fprint(w, string(passageJson))

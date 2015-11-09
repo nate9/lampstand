@@ -38,7 +38,7 @@ func TestToJson(t *testing.T) {
 	}
 }
 
-func TestToPassage(t *testing.T) {
+func TestToVerses(t *testing.T) {
 	db, mock, err := sqlmock.New()
 	if err != nil {
 		fmt.Println("failed to open sqlmock database:", err)
@@ -55,28 +55,20 @@ func TestToPassage(t *testing.T) {
 		fmt.Println("failed to query mock database:", err)
 	}
 
-	defer rs.Close()
+	result := ToVerses(rs)
 
-	result := ToPassage(rs)
-
-	want := Passage{
-		"",
-		"",
-		[]Verse{
-			Verse{
-				Book:    "Genesis",
-				Chapter: 1,
-				VerseNo: 1,
-				Text:    "In the beginning",
-			},
+	want := []Verse{
+		Verse{
+			Book:    "Genesis",
+			Chapter: 1,
+			VerseNo: 1,
+			Text:    "In the beginning",
 		},
 	}
 
-	gotVerse := result.Verses[0]
-	wantVerse := want.Verses[0]
-
-	if gotVerse != wantVerse {
-		t.Errorf("ToPassage = %q, want %q", gotVerse, wantVerse)
+	for i := 0; i < len(want); i++ {
+		if result[i] != want[i] {
+			t.Errorf("ToVerses = %+v, want %+v", result[i], want[i])
+		}
 	}
-
 }

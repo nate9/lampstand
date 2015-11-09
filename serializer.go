@@ -19,17 +19,15 @@ type Passage struct {
 	Verses    []Verse `json:"verses"`
 }
 
-func ToPassage(rs *sql.Rows) Passage {
-	p := Passage{Reference: "",
-		Version: "",
-		Verses:  []Verse{}}
+func ToVerses(rs *sql.Rows) []Verse {
+	verses := []Verse{}
 	for rs.Next() {
 		v := new(Verse)
 		var version string
 		rs.Scan(&version, &v.Book, &v.Chapter, &v.VerseNo, &v.Text)
-		p.Verses = append(p.Verses, *v)
+		verses = append(verses, *v)
 	}
-	return p
+	return verses
 }
 
 func ToJson(p Passage) string {

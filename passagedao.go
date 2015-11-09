@@ -17,10 +17,10 @@ type PassageDaoImpl struct {
 type PassageDao interface {
 	Setup(setupDir string)
 	GetVersions() ([]string, error)
-	FindChapter(version string, book string, chapterNo int) (Passage, error)
-	FindVerse(version string, book string, chapterNo int, verseNo int) (Passage, error)
-	FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (Passage, error)
-	FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (Passage, error)
+	FindChapter(version string, book string, chapterNo int) ([]Verse, error)
+	FindVerse(version string, book string, chapterNo int, verseNo int) ([]Verse, error)
+	FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) ([]Verse, error)
+	FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) ([]Verse, error)
 	FindBook(book string) (string, error)
 	Close()
 }
@@ -79,36 +79,36 @@ func (p *PassageDaoImpl) GetVersions() (result []string, err error) {
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindChapter(version string, book string, chapterNo int) (result Passage, err error) {
+func (p *PassageDaoImpl) FindChapter(version string, book string, chapterNo int) (result []Verse, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? + AND CHAPTER = ?"
 	rows, err := p.db.Query(query, version, book+"%", chapterNo)
 	checkErr(err)
-	result = ToPassage(rows)
+	result = ToVerses(rows)
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, verseNo int) (result Passage, err error) {
+func (p *PassageDaoImpl) FindVerse(version string, book string, chapterNo int, verseNo int) (result []Verse, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE = ?"
 	rows, err := p.db.Query(query, version, book+"%", chapterNo, verseNo)
 	checkErr(err)
-	result = ToPassage(rows)
+	result = ToVerses(rows)
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (result Passage, err error) {
+func (p *PassageDaoImpl) FindVerses(version string, book string, chapterNo int, verseBegin int, verseEnd int) (result []Verse, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND CHAPTER = ? AND VERSE BETWEEN ? AND ?"
 	rows, err := p.db.Query(query, version, book+"%", chapterNo, verseBegin, verseEnd)
 	checkErr(err)
-	result = ToPassage(rows)
+	result = ToVerses(rows)
 	return result, err
 }
 
-func (p *PassageDaoImpl) FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (result Passage, err error) {
+func (p *PassageDaoImpl) FindMultiChapterPassage(version string, book string, chapterStart int, chapterEnd int, verseBegin int, verseEnd int) (result []Verse, err error) {
 	query := "SELECT * FROM BIBLE WHERE VERSION = ? AND BOOK LIKE ? AND ((CHAPTER = ? AND VERSE >= ?) OR (CHAPTER = ? AND VERSE <= ?))"
 	orderby := "ORDER BY CHAPTER, VERSE"
 	rows, err := p.db.Query(query+orderby, version, book+"%", chapterStart, verseBegin, chapterEnd, verseEnd)
 	checkErr(err)
-	result = ToPassage(rows)
+	result = ToVerses(rows)
 	return result, err
 }
 
