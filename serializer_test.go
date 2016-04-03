@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
+	"github.com/nate9/lampstand/api"
 	"gopkg.in/DATA-DOG/go-sqlmock.v1"
 	"testing"
 )
 
 func TestToJson(t *testing.T) {
-	p := Passage{
+	p := api.Passage{
 		"Genesis 1:1",
 		"NIV",
-		[]Verse{
-			Verse{
+		[]api.Verse{
+			api.Verse{
 				Book:    "Genesis",
 				Chapter: 1,
 				VerseNo: 1,
@@ -24,7 +25,7 @@ func TestToJson(t *testing.T) {
 		"\"version\":\"NIV\"," +
 		"\"verses\":[{\"book\":\"Genesis\",\"chapter\":1,\"verseNo\":1,\"text\":\"In the beginning\"}]}"
 	cases := []struct {
-		in   Passage
+		in   api.Passage
 		want string
 	}{
 		{p, e},
@@ -38,7 +39,7 @@ func TestToJson(t *testing.T) {
 	}
 }
 
-func TestToPassage(t *testing.T) {
+func TestToVerses(t *testing.T) {
 	db, mock, err := sqlmock.New()
 	if err != nil {
 		fmt.Println("failed to open sqlmock database:", err)
@@ -55,28 +56,20 @@ func TestToPassage(t *testing.T) {
 		fmt.Println("failed to query mock database:", err)
 	}
 
-	defer rs.Close()
+	result := ToVerses(rs)
 
-	result := ToPassage(rs)
-
-	want := Passage{
-		"",
-		"",
-		[]Verse{
-			Verse{
-				Book:    "Genesis",
-				Chapter: 1,
-				VerseNo: 1,
-				Text:    "In the beginning",
-			},
+	want := []api.Verse{
+		api.Verse{
+			Book:    "Genesis",
+			Chapter: 1,
+			VerseNo: 1,
+			Text:    "In the beginning",
 		},
 	}
 
-	gotVerse := result.Verses[0]
-	wantVerse := want.Verses[0]
-
-	if gotVerse != wantVerse {
-		t.Errorf("ToPassage = %q, want %q", gotVerse, wantVerse)
+	for i := 0; i < len(want); i++ {
+		if result[i] != want[i] {
+			t.Errorf("ToVerses = %+v, want %+v", result[i], want[i])
+		}
 	}
-
 }

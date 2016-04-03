@@ -1,10 +1,24 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
+	_ "github.com/mattn/go-sqlite3"
 	"gopkg.in/DATA-DOG/go-sqlmock.v1"
+	"log"
 	"testing"
 )
+
+func SetupTestDatabase(database string) {
+	log.Println("SETTING UP TEST DATABASE")
+	db, err := sql.Open("sqlite3", database)
+	if err != nil {
+		panic(err)
+	}
+	insertBookIntoDb("./resources/setup_tables.sql", db)
+	insertBookIntoDb("./resources/NIV/NIV_Matthew_sql_script.sql", db)
+	insertBookIntoDb("./resources/ESV/ESV_Matthew_sql_script.sql", db)
+}
 
 func TestShouldReturnVersions(t *testing.T) {
 	db, mock, err := sqlmock.New()
