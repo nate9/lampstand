@@ -56,8 +56,9 @@ func (p *PassageDaoImpl) Setup(setupDir string) {
 
 func insertBookIntoDb(path string, db *sql.DB) {
 	dat, err := ioutil.ReadFile(path)
-	bookSql := string(dat)
 	checkErr(err)
+
+	bookSql := string(dat)
 
 	_, err = db.Exec(bookSql)
 	checkErr(err)

@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
+	"github.com/nate9/lampstand/api"
 	"gopkg.in/DATA-DOG/go-sqlmock.v1"
 	"testing"
 )
 
 func TestToJson(t *testing.T) {
-	p := Passage{
+	p := api.Passage{
 		"Genesis 1:1",
 		"NIV",
-		[]Verse{
-			Verse{
+		[]api.Verse{
+			api.Verse{
 				Book:    "Genesis",
 				Chapter: 1,
 				VerseNo: 1,
@@ -24,7 +25,7 @@ func TestToJson(t *testing.T) {
 		"\"version\":\"NIV\"," +
 		"\"verses\":[{\"book\":\"Genesis\",\"chapter\":1,\"verseNo\":1,\"text\":\"In the beginning\"}]}"
 	cases := []struct {
-		in   Passage
+		in   api.Passage
 		want string
 	}{
 		{p, e},
@@ -57,8 +58,8 @@ func TestToVerses(t *testing.T) {
 
 	result := ToVerses(rs)
 
-	want := []Verse{
-		Verse{
+	want := []api.Verse{
+		api.Verse{
 			Book:    "Genesis",
 			Chapter: 1,
 			VerseNo: 1,
