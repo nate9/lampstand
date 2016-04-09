@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+	log "github.com/Sirupsen/logrus"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/nate9/lampstand/api"
 	"io/ioutil"
@@ -27,6 +28,7 @@ type PassageDao interface {
 }
 
 func NewPassageDao(database string) (PassageDao, error) {
+	log.Info("Opening database: " + database)
 	db, err := sql.Open("sqlite3", database)
 	p := &PassageDaoImpl{db: db}
 	return p, err
@@ -38,7 +40,7 @@ func TestPassageDao(db *sql.DB) PassageDao {
 }
 
 func (p *PassageDaoImpl) Setup(setupDir string) {
-	fmt.Println("Setting up database")
+	log.Info("Setting up database")
 	fileList := []string{}
 	filepath.Walk(setupDir, func(path string, f os.FileInfo, _ error) error {
 		if !f.IsDir() {
@@ -48,10 +50,10 @@ func (p *PassageDaoImpl) Setup(setupDir string) {
 	})
 
 	for _, f := range fileList {
-		fmt.Println("Inserting " + f + " into database")
+		log.Debug("Inserting " + f + " into database")
 		insertBookIntoDb(f, p.db)
 	}
-	fmt.Println("finished!")
+	log.Info("finished!")
 }
 
 func insertBookIntoDb(path string, db *sql.DB) {
@@ -66,6 +68,7 @@ func insertBookIntoDb(path string, db *sql.DB) {
 
 func (p *PassageDaoImpl) GetVersions() (result []string, err error) {
 	query := "SELECT * FROM VERSIONS"
+	log.Debug("SQL Query: " + query)
 	rows, err := p.db.Query(query)
 	if err != nil {
 		fmt.Println(err)

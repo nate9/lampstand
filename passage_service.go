@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	log "github.com/Sirupsen/logrus"
 	"github.com/julienschmidt/httprouter"
 	"github.com/nate9/lampstand/api"
-	"log"
 	"net/http"
 	"strconv"
 	"strings"
@@ -41,7 +41,7 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 		return
 	}
 
-	fmt.Println(passagequery)
+	log.Info("Got a query request for passage: " + passagequery)
 	pq := parsePassage(passagequery)
 	passage := *new(api.Passage)
 	var verses []api.Verse
@@ -69,7 +69,7 @@ func (s *PassageService) findVerses(w http.ResponseWriter, r *http.Request, ps h
 	}
 
 	if len(verses) == 0 {
-		log.Println("passage not found")
+		log.Error("Passage " + passagequery + " not found")
 		http.Error(w, "No such passage exists", 404)
 		return
 	}

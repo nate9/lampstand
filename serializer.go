@@ -3,7 +3,7 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
-	"fmt"
+	log "github.com/Sirupsen/logrus"
 	"github.com/nate9/lampstand/api"
 )
 
@@ -21,7 +21,7 @@ func ToVerses(rs *sql.Rows) []api.Verse {
 func ToJson(p api.Passage) string {
 	verseJson, err := json.Marshal(p)
 	if err != nil {
-		fmt.Println("json err:", err)
+		log.Error("json err:", err)
 	}
 	return string(verseJson)
 }
