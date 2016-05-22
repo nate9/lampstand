@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/nate9/lampstand/api"
 	"io/ioutil"
-	"log"
+	log "github.com/Sirupsen/logrus"
 	"net/http"
 )
 
@@ -22,7 +22,7 @@ func (c *PassageClient) GetSingleChapterPassage(version string, book string, cha
 	passageString := url.QueryEscape(fmt.Sprintf("%s %d", book, chapter))
 	passageQuery := fmt.Sprintf("%s/verses?passage=%s", version, passageString)
 	url := fmt.Sprintf("%s/api/%s", c.Host, passageQuery)
-	log.Println(url)
+	log.Info("Sending request to: " + url)
 	r, err := http.Get(url)
 	if err != nil {
 		return passage, err
@@ -38,7 +38,7 @@ func (c *PassageClient) GetSingleVersePassage(version string, book string, chapt
 	passageString := url.QueryEscape(fmt.Sprintf("%s %d:%d", book, chapter, verse))
 	passageQuery := fmt.Sprintf("%s/verses?passage=%s", version, passageString)
 	url := fmt.Sprintf("%s/api/%s", c.Host, passageQuery)
-	log.Println(url)
+	log.Info("Sending request to: " + url)
 	r, err := http.Get(url)
 	if err != nil {
 		return passage, err
@@ -54,6 +54,7 @@ func (c *PassageClient) GetMultipleVersesPassage(version string, book string, ch
 	passageString := url.QueryEscape(fmt.Sprintf("%s %d:%d-%d", book, chapter, verseStart, verseEnd))
 	passageQuery := fmt.Sprintf("%s/verses?passage=%s", version, passageString)
 	url := fmt.Sprintf("%s/api/%s", c.Host, passageQuery)
+	log.Info("Sending request to: " + url)
 	r, err := http.Get(url)
 	if err != nil {
 		return passage, err
@@ -69,6 +70,7 @@ func (c *PassageClient) GetMultipleChapterPassage(version string, book string, c
 	passageString := url.QueryEscape(fmt.Sprintf("%s %d:%d-%d:%d", book, chapterStart, verseStart, chapterEnd, verseEnd))
 	passageQuery := fmt.Sprintf("%s/verses?passage=%s", version, passageString)
 	url := fmt.Sprintf("%s/api/%s", c.Host, passageQuery)
+	log.Info("Sending request to: " + url)
 	r, err := http.Get(url)
 	if err != nil {
 		return passage, err
