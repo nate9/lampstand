@@ -5,12 +5,12 @@ section .lampstand {
 
 div .passage {
 	font-family: Georgia, serif;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 1.2;
 }
 
-div .reference{
-	font-size: 1em;
+div .reference {
+	font-size: 1.2em;
 	font-weight: bold;
 	text-align: right;
 }
