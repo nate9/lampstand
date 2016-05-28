@@ -150,6 +150,21 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.addEventListener( 'slidechanged', function(event){
+				resizeVerses();
+			})
+
+			function resizeVerses() {
+				var currentSlide = document.querySelector("section.lampstand.part.present")
+				if(currentSlide) {
+					if(currentSlide.scrollHeight > 700) {
+						console.log("overflow")
+						currentSlide.style['font-size'] = "" + (700 / currentSlide.scrollHeight * 100) + "%"
+					}
+				}
+			}
+			resizeVerses();
 		</script>
 	</body>
 </html>
