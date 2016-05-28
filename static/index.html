@@ -25,10 +25,6 @@
 		<!-- Latest compiled and minified CSS -->
 		<!--
 		-->
-		<!-- Optional theme -->
-		<!--
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		-->
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -54,15 +50,18 @@
 	</head>
 
 	<body>
+		<div id="buildinfo">
+			<span>Lampstand v0.2 | by nate9</span>
+		</div>
 
-		<div class="container">
-			<div class="col-lg-6 col-md-offset-2">
+		<div class="container" id="searchbar">
+			<div class="col-md-6 col-md-offset-3">
 				<br/>
 				<br/>
 				<div class="input-group">
 					<input type="text" id="passage" class="form-control" placeholder="Enter Bible Verse Here">
 					<span class="input-group-btn">
-						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: auto">
+						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: 100px">
 							<option value="ESV">ESV</option>
 							<option value="HCSB">HCSB</option>
 							<option value="NIV">NIV</option>
@@ -78,68 +77,50 @@
 					</span>
 				</div>
 			</div>
+
 		</div>
+
+
 
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Welcome to Lampstand!</h1>
-					<h3>Bible Verse Slides as a Service!</h3>
-					<p>Hacked up by nate9 :p</p>
+					<section>
+						<h1>Welcome to Lampstand!</h1>
+						<h3>Bible Verse Slides as a Service!</h3>
+						<p>Hacked up by nate9 :p</p>
+					</section>
+					<section>
+						<p>Enter in the passage up top, E.G. "John 3:16-20"</p>
+						<p>The slides will appear at the end</p>
+						<p>Use ALT + Click to zoom in to hide the search bar!</p>
+					</section>
+					<section>
+					<span>Copyrights</span>
+					<div>
+						<p>
+							<small>
+							Holman Christian Standard Bible®
+							Copyright © 1999, 2000, 2002, 2003, 2009 by Holman Bible Publishers.
+							Used with permission by Holman Bible Publishers, Nashville, Tennessee. All rights reserved.
+							</small>
+						</p>
+						<p>
+							<small>
+								THE HOLY BIBLE, NEW INTERNATIONAL VERSION®, NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide.
+							</small>
+						</p>
+						<p>
+							<small>
+	The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 by Crossway, a publishing ministry of Good News Publishers. ESV® Text Edition: 2011. The ESV® text has been reproduced in cooperation with and by permission of Good News Publishers. Unauthorized reproduction of this publication is prohibited. All rights reserved.
+							</small>
+						</p>
+						</div>
+					</section>
 				</section>
-
-				<section>
-					<p>Enter in the passage up top, E.G. "John 3:16-20"</p>
-					<p>The slides will appear at the end</p>
-					<p>Use ALT + Click to zoom in to hide the search bar!</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-				<span>Copyrights</span>
-				<div>
-					<p>
-						<small>
-						Holman Christian Standard Bible®
-						Copyright © 1999, 2000, 2002, 2003, 2009 by Holman Bible Publishers.
-						Used with permission by Holman Bible Publishers, Nashville, Tennessee. All rights reserved.
-						</small>
-					</p>
-					<p>
-						<small>
-							THE HOLY BIBLE, NEW INTERNATIONAL VERSION®, NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by permission. All rights reserved worldwide.
-						</small>
-					</p>
-					<p>
-						<small>
-The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 by Crossway, a publishing ministry of Good News Publishers. ESV® Text Edition: 2011. The ESV® text has been reproduced in cooperation with and by permission of Good News Publishers. Unauthorized reproduction of this publication is prohibited. All rights reserved.
-						</small>
-					</p>
-					</div>
-				</section>
-
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -165,14 +146,10 @@ The ESV® Bible (The Holy Bible, English Standard Version®) copyright © 2001 b
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-
 		</script>
 	</body>
 </html>
