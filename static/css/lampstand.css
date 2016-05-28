@@ -4,11 +4,27 @@ section .lampstand {
 }
 
 div .passage {
+	font-family: Georgia, serif;
 	font-size: 1.5em;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 div .reference{
+	font-size: 1em;
 	font-weight: bold;
 	text-align: right;
+}
+
+#searchbar {
+	position: fixed;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	z-index: 1000
+}
+
+#buildinfo {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	font-size: 1em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }

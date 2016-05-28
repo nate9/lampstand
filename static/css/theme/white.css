@@ -29,6 +29,15 @@ body {
   line-height: 1.3;
   font-weight: inherit; }
 
+.reveal .slides {
+  margin-top: 100px;
+  margin-bottom: 100px
+}
+
+.reveal .slides .present {
+  height: 100%;
+  overflow: hidden;}
+
 /*********************************************
  * HEADERS
  *********************************************/
