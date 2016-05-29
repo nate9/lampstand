@@ -152,19 +152,23 @@
 			});
 
 			Reveal.addEventListener( 'slidechanged', function(event){
-				resizeVerses();
-			})
+				resizeVerses(event.currentSlide);
+			});
 
-			function resizeVerses() {
-				var currentSlide = document.querySelector("section.lampstand.part.present")
+			Reveal.addEventListener( 'ready', function( event ) {
+				var currentSlide = document.querySelector("section.lampstand.part.present");
+				if(currentSlide) {
+					resizeVerses(currentSlide);
+				}
+			});
+
+			function resizeVerses(currentSlide) {
 				if(currentSlide) {
 					if(currentSlide.scrollHeight > 700) {
-						console.log("overflow")
-						currentSlide.style['font-size'] = "" + (700 / currentSlide.scrollHeight * 100) + "%"
+						currentSlide.style['font-size'] = "" + (700 / currentSlide.scrollHeight * 100) + "%";
 					}
 				}
 			}
-			resizeVerses();
 		</script>
 	</body>
 </html>
