@@ -30,13 +30,14 @@ body {
   font-weight: inherit; }
 
 .reveal .slides {
-  margin-top: 100px;
-  margin-bottom: 100px
+  margin-top: 10%;
+  margin-bottom: 10%
 }
 
 .reveal .slides .present {
-  height: 100%;
-  overflow: hidden;}
+  height: 700px;
+  overflow: hidden;
+}
 
 /*********************************************
  * HEADERS
