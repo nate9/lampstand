@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 go get github.com/julienschmidt/httprouter
 go get github.com/mattn/go-sqlite3
