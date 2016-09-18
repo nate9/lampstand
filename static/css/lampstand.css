@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Lora';
+
 section .lampstand {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -5,7 +7,7 @@ section .lampstand {
 }
 
 div .passage {
-	font-family: Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
 	font-size: 1.6em;
 	line-height: 1.2;
 }
