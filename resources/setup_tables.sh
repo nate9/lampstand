@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sqlite3 bible.db < setup_tables.sql
 
