@@ -14,7 +14,7 @@ func main() {
 	service := NewPassageService("./bible.db")
 	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
 	if bind == ":" {
-		bind = "localhost:8080"
+		bind = "0.0.0.0:8080"
 	}
 	log.Info("Serving lampstand on : " + bind)
 	log.Fatal(RunPassageService(service, bind))

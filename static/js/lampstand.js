@@ -136,7 +136,7 @@ PassageView.prototype._createNewVerseEl = function(verseNo, text, isFragment) {
 	if(isFragment) {
 		newVerse.className = newVerse.className + " fragment";
 	}
-	newVerse.innerHTML = "<sup>" + verseNo +"</sup>" + text;
+	newVerse.innerHTML = "<sup>" + verseNo +"</sup> " + text + " ";
 	return newVerse;
 }
 
