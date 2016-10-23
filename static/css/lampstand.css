@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Lora';
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
 
 section .lampstand {
 	margin-left: 0px;
@@ -7,7 +7,7 @@ section .lampstand {
 }
 
 div .passage {
-	font-family: 'Lora', Georgia, serif;
+	font-family: 'Merriweather', Georgia, serif;
 	font-size: 1.6em;
 	line-height: 1.2;
 }
