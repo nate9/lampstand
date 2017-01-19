@@ -21,10 +21,56 @@ div .reference {
 	top: auto;
 }
 
+.lampstand-btn {
+	line-height: inherit;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: none;
+	margin-bottom: 0;
+	letter-spacing: normal;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.lampstand-form {
+	font-size: 14px;
+}
+
 #searchbar {
+	max-width: 100%;
+	width: 100%;
 	position: fixed;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	z-index: 1000
+	z-index: 1000;
+	margin-bottom: 0;
+}
+
+#searchform {
+	width: 100%;
+	display: inline-block;
+	border-width: 2px;
+	border-color: grey;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+#searchform > input, #searchform > select, #searchform > button {
+	margin-bottom: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
+}
+
+#searchform > :first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#searchform > :last-child {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 
 #buildinfo {
@@ -33,4 +79,16 @@ div .reference {
 	right: 5px;
 	font-size: 1em;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#passage {
+	width: calc(100% - 300px);
+}
+
+#toggletoolbar {
+	text-align: center;
+	margin: 0 auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 14px
 }

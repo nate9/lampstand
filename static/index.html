@@ -13,7 +13,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
@@ -34,16 +34,13 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://use.fontawesome.com/96187dd7be.js"></script>
 		<style>
 			.input-group .form-control select {
 				width: auto;
 			}
 		</style>
 		<!-- Latest compiled and minified JavaScript -->
-		<!--
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		-->
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -54,33 +51,33 @@
 			<span>Lampstand v0.2 | by nate9</span>
 		</div>
 
-		<div class="container-fluid" id="searchbar">
-			<div class="col-md-4 col-md-offset-4">
-				<br/>
-				<br/>
-				<div class="input-group">
-					<input type="text" id="passage" class="form-control" placeholder="Enter Bible Verse Here">
-					<span class="input-group-btn">
-						<select id="version" class="selectpicker form-control dropdown-toggle" style="width: 100px">
+		<div class="container" id="searchbar">
+			<div class="row">
+				<div class="six columns offset-by-three">
+					<form id="searchform">
+					   <input type="text" id="passage" class="lampstand-form" placeholder="Enter Bible Verse Here"></input><!--
+					--><select id="version" class="lampstand-form" style="width: 100px">
 							<option value="ESV">ESV</option>
 							<option value="HCSB">HCSB</option>
 							<option value="NIV">NIV</option>
 							<option value="NIV2011">NIV2011</option>
-						</select>
-						<button id="search" class="btn btn-default" type="button">
-							<span class="glyphicon glyphicon-search"></span>
-							Search
+						</select><!--
+					 --><button id="search" class="lampstand-btn btn btn-default" type="button">
+							<i class="fa fa-search" aria-hidden="true"></i> Search
+						</button><!--
+					 --><button id="clear" class="lampstand-btn btn btn-default" type="button">
+							<i class="fa fa-trash" aria-hidden="true"></i> Delete All
 						</button>
-						<button id="clear" class="btn btn-default" type="button">
-							<span class="glyphicon glyphicon-trash"></span>Delete All
+					</form>
+					<div class="row" style="text-align: center;">
+						<button id="toggletoolbar" class="inactive btn btn-default" type="button">
+							<i class="fa fa-2x fa-caret-up" aria-hidden="true"></i>
 						</button>
-					</span>
+					</div>
 				</div>
 			</div>
 
 		</div>
-
-
 
 		<div class="reveal">
 

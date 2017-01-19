@@ -1,3 +1,4 @@
+/* global Reveal, localStorage */
 // select a list of matching elements, context is optional
 function qs(selector, context) {
     return (context || document).querySelectorAll(selector);
@@ -107,11 +108,11 @@ PassageView.prototype._renderPassage = function(passage) {
 		var verseNo = verses[i].verseNo;
 		if(i % fragments == 0) {
 			newSection = this._createNewSection()
-			newVerse = this._createNewVerseEl(verseNo, text, false)
+			var newVerse = this._createNewVerseEl(verseNo, text, false)
 			newPassage.appendChild(newSection)
 			newSection.appendChild(newVerse)
 		} else {
-			newVerse =  this._createNewVerseEl(verseNo, text, true)
+			var newVerse =  this._createNewVerseEl(verseNo, text, true)
 			newSection.appendChild(newVerse)
 		}
 	}
@@ -153,9 +154,14 @@ function SearchBar(passageStore) {
 	this.$searchBtn = qs1("#search");
 	this.$clearAllBtn = qs1("#clear");
 	this.$slides = qs1(".slides");
+	
+	this.$searchForm = qs1("#searchform")
+	this.isSearchFormActive = true;
+	this.$toggleBtn = qs1("#toggletoolbar")
 
 	this.$searchBtn.addEventListener("click", this.search.bind(this))	
 	this.$clearAllBtn.addEventListener("click", this.passageStore.deleteAll.bind(this.passageStore));
+	this.$toggleBtn.addEventListener("click", this.toggleBar.bind(this))
 }
 
 SearchBar.prototype.search = function() {
@@ -173,4 +179,19 @@ SearchBar.prototype.search = function() {
 SearchBar.prototype._dispatch = function(request) {
     var response = JSON.parse(request.currentTarget.response || request.target.responseText);
 	this.passageStore.addPassage(response);
+}
+
+SearchBar.prototype.toggleBar = function() {
+	var barIcon = qs1("i", this.$toggleBtn);
+	if(this.isSearchFormActive) {
+		this.$searchForm.style.display = "none";
+		barIcon.classList.remove("fa-caret-up");
+		barIcon.classList.add("fa-caret-down");
+	} else {
+		this.$searchForm.style.display = "inline-block";
+		barIcon.classList.remove("fa-caret-down");
+		barIcon.classList.add("fa-caret-up");
+	}
+	
+	this.isSearchFormActive = !this.isSearchFormActive;
 }
