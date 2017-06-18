@@ -95,6 +95,7 @@ PassageView.prototype.render = function(passages) {
 }
 
 PassageView.prototype._renderPassage = function(passage) {
+	var lastChapter = 0;
 	var verses = passage.verses;
 	var reference = passage.reference;
 	var version = passage.version;
@@ -103,10 +104,12 @@ PassageView.prototype._renderPassage = function(passage) {
 	this.$slides.appendChild(newPassage);
 	var newSection;
 	var fragments = 2;
+	var offset = 0;
 	for(var i = 0; i < verses.length; i++) {
 		var text = verses[i].text;
 		var verseNo = verses[i].verseNo;
-		if(i % fragments == 0) {
+		
+		if((i + offset) % fragments == 0) {
 			newSection = this._createNewSection()
 			var newVerse = this._createNewVerseEl(verseNo, text, false)
 			newPassage.appendChild(newSection)
@@ -114,6 +117,15 @@ PassageView.prototype._renderPassage = function(passage) {
 		} else {
 			var newVerse =  this._createNewVerseEl(verseNo, text, true)
 			newSection.appendChild(newVerse)
+		}
+		
+		if (verses[i].chapter > lastChapter) {
+			lastChapter = verses[i].chapter;
+			var chapterEl = this._createNewChapterEl(lastChapter);
+			newSection.insertBefore(chapterEl, newSection.firstChild);
+			if((i + offset) % fragments == 0) {
+				offset = offset + 1;
+			}
 		}
 	}
 	var passages = qs("section.lampstand", newPassage);
@@ -123,6 +135,13 @@ PassageView.prototype._renderPassage = function(passage) {
 	for(var i = 0; i < passages.length; i++) {
 		passages[i].appendChild(referenceEl.cloneNode(true));
 	}
+}
+
+PassageView.prototype._createNewChapterEl = function(chapterNo) {
+	var newChapter = document.createElement("span");
+	newChapter.className = 'lampstand chapter';
+	newChapter.innerHTML = chapterNo;
+	return newChapter;
 }
 
 PassageView.prototype._createNewSection = function() {

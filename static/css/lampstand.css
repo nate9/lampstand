@@ -23,6 +23,12 @@ div .reference {
 	top: auto;
 }
 
+.lampstand.chapter {
+	font-family: Georgia;
+	font-size: 3.2em;
+	float:left;
+}
+
 .lampstand-btn {
 	line-height: inherit;
 	font-style: normal;
