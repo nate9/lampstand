@@ -108,6 +108,14 @@ PassageView.prototype._renderPassage = function(passage) {
 	for(var i = 0; i < verses.length; i++) {
 		var text = verses[i].text;
 		var verseNo = verses[i].verseNo;
+		var chapterEl = false;
+		if (verses[i].chapter > lastChapter) {
+			lastChapter = verses[i].chapter;
+			chapterEl = this._createNewChapterEl(lastChapter);
+			if((i + offset) % fragments != 0) {
+				offset = offset + 1;
+			}
+		}
 		
 		if((i + offset) % fragments == 0) {
 			newSection = this._createNewSection()
@@ -118,14 +126,8 @@ PassageView.prototype._renderPassage = function(passage) {
 			var newVerse =  this._createNewVerseEl(verseNo, text, true)
 			newSection.appendChild(newVerse)
 		}
-		
-		if (verses[i].chapter > lastChapter) {
-			lastChapter = verses[i].chapter;
-			var chapterEl = this._createNewChapterEl(lastChapter);
+		if(chapterEl) {
 			newSection.insertBefore(chapterEl, newSection.firstChild);
-			if((i + offset) % fragments == 0) {
-				offset = offset + 1;
-			}
 		}
 	}
 	var passages = qs("section.lampstand", newPassage);
